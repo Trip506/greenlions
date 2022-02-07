@@ -15,9 +15,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Reem+Kufi:400,500,600,700&display=swap'
+      }
     ],
-
 
     script: [
       { src: "/web/assets/jquery/jquery.min.js", body: true, type: 'text/javascript', },
@@ -35,14 +38,14 @@ export default {
       { src: "/datepicker/jquery.datetimepicker.full.js", body: true, type: 'text/javascript', },
       { src: "/theme/js/script.js", body: true, type: 'text/javascript', },
       { src: "/gallery/player.min.js", body: true, type: 'text/javascript', },
-      { src: "/gallery/script.js", body: true, type: 'text/javascript', },
+      // { src: "/gallery/script.js", body: true, type: 'text/javascript', },
       { src: "/formoid/formoid.min.js", body: true, type: 'text/javascript', },
     ],
-
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+
     "assets/web/assets/mobirise-icons2/mobirise2.css",
     "assets/web/assets/mobirise-icons/mobirise-icons.css",
     "assets/tether/tether.min.css",
@@ -55,9 +58,9 @@ export default {
     "assets/datepicker/jquery.datetimepicker.min.css",
     "assets/socicon/css/styles.css",
     "assets/theme/css/style.css",
-    // "assets/gallery/style.css",
     "assets/mobirise/css/mbr-additional.css",
     "assets/styles.pure.css",
+
   ],
 
 
