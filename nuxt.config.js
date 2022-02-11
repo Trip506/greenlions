@@ -2,17 +2,25 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'greenlions',
+    title: "Green Lions Gardening",
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: "Gardening services penzance mowing strimming improvement maintenance landscaping design allotment care" },
+      { name: 'format-detection', content: 'telephone=no' },
+
+      //Facebook og (open graph) meta data 
+      { hid: 'fb:app_id', name: 'fb:app_id', content: 'Green Lions Gardening ' },
+      { hid: 'og:title', name: 'og:title', content: "Gardening Services in West Penwith " },
+      { hid: 'og:image', name: 'og:image', content: "assets/images/iphone0-1349x1012-result.jpg" },
+      { hid: 'twitter:title', name: 'twitter:title', content: "Green Lions Gardening" },
+      { hid: 'og:description', name: 'og:description', content: "Gardening services penzance mowing strimming improvement maintenance landscaping design allotment care" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -66,6 +74,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/jsonld',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -73,15 +82,36 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/dotenv'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/strapi'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    // With options
 
-  strapi: {
-    entities: ['posts'],
-    url: 'http://localhost:1337'
+  ],
+
+  //SEO settings
+  sitemap: {
+    hostname: "https://www.greenlionsgardening.com",
+    gzip: true,
+    exclude: ["/secret", "/admin/**", "/edit"]
   },
+
+  //SEO settings
+  robots: {
+    UserAgent: "*",
+    Allow: "/",
+    // Disallow: "/",
+    Sitemap: 'https://www.greenlionsgardening.com/sitemap.xml'
+  },
+
+
+
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

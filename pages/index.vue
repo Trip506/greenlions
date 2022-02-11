@@ -785,7 +785,17 @@
 
 <script>
 export default {
-	name: "IndexPage",
+	head: {
+		title: "Home | Green Lions Gardening Services",
+		meta: [
+			{
+				hid: "description",
+				name: "description",
+				content:
+					"We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!",
+			},
+		],
+	},
 	data() {
 		return {
 			posts: [],
@@ -798,11 +808,29 @@ export default {
 		IconSlogans: () => import("@/components/IconSlogans"),
 		Services: () => import("@/components/Services"),
 	},
-	//get strapi data
-	async fetch() {
-		this.posts = await fetch(
-			"http://localhost:1337/api/posts?slug=landscape-clearance-in-lelant"
-		).then((res) => res.json());
+
+	jsonld() {
+		return {
+			"@context": "http://www.schema.org",
+			"@type": "GeneralContractor",
+			name: "The Green Lions Gardening Services",
+			url: "http://www.greenlionsgardening.com",
+			sameAs: ["https:/greenlionsgardening.com"],
+			logo: "http://www.greenlionsgardening.com/assets/images/logomark-6.svg",
+			description:
+				"We are skilled and trusted gardeners with over 18 years of working horticultural experience in Cornwall . The Green Lions of Penzance are your top choice for garden, allotment and landscaping needs in West Penwith. ",
+			address: {
+				"@type": "PostalAddress",
+				addressLocality: "Penzance",
+				addressRegion: "Cornwall",
+				postalCode: "TR18 ",
+				addressCountry: "United Kingdom",
+			},
+			openingHours:
+				"Mo 09:00-18:30 Tu 09:00-18:00 Th 09:00-19:00 Fr 09:00-19:00",
+			telephone: "07884 255127",
+		};
 	},
+	//get strapi data
 };
 </script>
