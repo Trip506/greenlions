@@ -1,3 +1,5 @@
+
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -109,11 +111,50 @@ export default {
     Sitemap: 'https://www.greenlionsgardening.com/sitemap.xml'
   },
 
+  //FOR MOBILE FRONTEND TESTING
+  
+  // server: {
+  //   port: 8000, // default: 3000
+  //   host: '0.0.0.0' // default: localhost
+  // },
 
 
 
+//COPIED FROM GOBORSHI 
+//Generate static pages from cockpit collection items 
+  
+  // build: {
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+
+  //   generate: {
+  //     fallback: true,
+  //     routes() {
+
+
+  //       let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
+  //         {
+
+  //           fields: { slug: 1, _id: 0 }
+  //         })
+  //         .then((res) => {
+  //           return res.data.entries.map((entry) => {
+  //             return {
+  //               route: '/team/' + entry.slug
+  //             }
+  //           })
+  //         });
+
+  //       return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh,]).then(values => {
+  //         return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5],]
+  //       })
+  //     },
+  //   }
+
+
+  // }
 }
+
+
+
+
+

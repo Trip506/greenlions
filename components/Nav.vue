@@ -31,7 +31,7 @@
 						<span class="navbar-logo">
 							<a href="index.html">
 								<img
-									src="images/logomark-6.svg"
+									src="/images/logomark-6.svg"
 									alt="Green Lions Gardening Primary Logo"
 									style="height: 3.8rem"
 								/>
@@ -41,7 +41,7 @@
 							><a
 								class="navbar-caption text-black text-primary display-2"
 								href="index.html"
-								>The Green Lions</a
+								>The Green Lions&nbsp;</a
 							></span
 						>
 					</div>
@@ -51,14 +51,6 @@
 						class="navbar-nav nav-dropdown nav-right"
 						data-app-modern-menu="true"
 					>
-						<li class="nav-item">
-							<a
-								class="nav-link link text-warning text-primary display-7"
-								href="index.html"
-								aria-expanded="false"
-								>Home</a
-							>
-						</li>
 						<li class="nav-item dropdown">
 							<a
 								class="
@@ -69,8 +61,15 @@
 									display-7
 								"
 								href="#"
-								aria-expanded="true"
+								aria-expanded="false"
 								data-toggle="dropdown-submenu"
+								><span
+									class="
+										mobi-mbri mobi-mbri-setting
+										mbr-iconfont mbr-iconfont-btn
+									"
+									style="font-size: 20px"
+								></span
 								>Services</a
 							>
 							<div class="dropdown-menu">
@@ -78,7 +77,7 @@
 									class="text-warning text-primary dropdown-item display-7"
 									href="regular-gardening-services.html"
 									aria-expanded="false"
-									>Regular Garden Services<br /></a
+									>Regular Garden Services</a
 								><a
 									class="text-warning text-primary dropdown-item display-7"
 									href="garden-troubleshooting.html"
@@ -119,6 +118,13 @@
 								href="#"
 								aria-expanded="false"
 								data-toggle="dropdown-submenu"
+								><span
+									class="
+										mobi-mbri mobi-mbri-hearth
+										mbr-iconfont mbr-iconfont-btn
+									"
+									style="font-size: 20px"
+								></span
 								>Clients</a
 							>
 							<div class="dropdown-menu">
@@ -131,7 +137,7 @@
 									class="text-warning text-primary dropdown-item display-7"
 									href="town-houses.html"
 									aria-expanded="false"
-									>Town Houses</a
+									>Town / Country Houses</a
 								><a
 									class="text-warning text-primary dropdown-item display-7"
 									href="large-estates.html"
@@ -141,7 +147,7 @@
 									class="text-warning text-primary dropdown-item display-7"
 									href="rural-land-owners.html"
 									aria-expanded="false"
-									>Rural Land Owners</a
+									>Estate Agents</a
 								><a
 									class="text-warning text-primary dropdown-item display-7"
 									href="page16.html"
@@ -155,18 +161,87 @@
 								>
 							</div>
 						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="
+									nav-link
+									link
+									text-warning text-primary
+									dropdown-toggle
+									display-7
+								"
+								href="#"
+								aria-expanded="false"
+								data-toggle="dropdown-submenu"
+								><span
+									class="
+										mobi-mbri mobi-mbri-map-pin
+										mbr-iconfont mbr-iconfont-btn
+									"
+									style="font-size: 20px"
+								></span
+								>Area Served</a
+							>
+							<div class="dropdown-menu">
+								<a
+									class="text-warning text-primary dropdown-item display-7"
+									href="area-served.html"
+									aria-expanded="false"
+									>Penzance</a
+								><a
+									class="text-warning text-primary dropdown-item display-7"
+									href="area-served.html"
+									aria-expanded="false"
+									>Newlyn</a
+								><a
+									class="text-warning text-primary dropdown-item display-7"
+									href="area-served.html"
+									aria-expanded="false"
+									>Marazion</a
+								><a
+									class="text-warning text-primary dropdown-item display-7"
+									href="area-served.html"
+									aria-expanded="false"
+									>St.Ives</a
+								><a
+									class="text-warning text-primary dropdown-item display-7"
+									href="area-served.html"
+									aria-expanded="false"
+									>Carbis Bay</a
+								><a
+									class="text-warning text-primary dropdown-item display-7"
+									href="area-served.html"
+									aria-expanded="false"
+									>Hayle</a
+								>
+							</div>
+						</li>
 						<li class="nav-item">
 							<a
 								class="nav-link link text-warning text-primary display-7"
 								href="area-served.html"
 								aria-expanded="false"
-								>Area Served</a
+								><span
+									class="
+										mobi-mbri mobi-mbri-photos
+										mbr-iconfont mbr-iconfont-btn
+									"
+									style="font-size: 20px"
+								></span
+								>Portfolio</a
 							>
 						</li>
 						<li class="nav-item">
 							<a
 								class="nav-link link text-warning text-primary display-7"
 								href="contact.html"
+								><span
+									class="
+										mobi-mbri mobi-mbri-phone
+										mbr-iconfont mbr-iconfont-btn
+									"
+									style="font-size: 20px"
+								></span
 								>Contact</a
 							>
 						</li>

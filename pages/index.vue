@@ -116,7 +116,7 @@
 						<p class="text1 pb-3 align-left mbr-fonts-style display-5">
 							<strong>What we do</strong>
 						</p>
-
+						{{ data }}
 						<div
 							class="mbr-text pb-5 counter-container mbr-fonts-style display-7"
 						>
@@ -798,10 +798,13 @@ export default {
 	},
 	data() {
 		return {
+			data: this.$store.state.pageData,
 			posts: [],
 			error: "",
 		};
 	},
+
+	middleware: "services",
 
 	components: {
 		Clients: () => import("@/components/Clients"),
