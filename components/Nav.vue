@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div style="margin-bottom: 50px">
 		<section class="menu cid-rArXDGngPj" once="menu" id="menu01-0">
 			<nav
 				class="
@@ -29,9 +29,9 @@
 				<div class="menu-logo">
 					<div class="navbar-brand">
 						<span class="navbar-logo">
-							<a href="index.html">
+							<a href="/">
 								<img
-									src="/images/logomark-6.svg"
+									src="images/logomark-7.svg"
 									alt="Green Lions Gardening Primary Logo"
 									style="height: 3.8rem"
 								/>
@@ -40,7 +40,7 @@
 						<span class="navbar-caption-wrap"
 							><a
 								class="navbar-caption text-black text-primary display-2"
-								href="index.html"
+								href="/"
 								>The Green Lions&nbsp;</a
 							></span
 						>
@@ -57,10 +57,9 @@
 									nav-link
 									link
 									text-warning text-primary
-									dropdown-toggle
 									display-7
+									dropdown-toggle
 								"
-								href="#"
 								aria-expanded="false"
 								data-toggle="dropdown-submenu"
 								><span
@@ -73,36 +72,13 @@
 								>Services</a
 							>
 							<div class="dropdown-menu">
-								<a
+								<NuxtLink
+									:to="'/services/' + item.slug"
+									v-for="(item, index) in $store.state.staticData[0][0]"
+									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
-									href="regular-gardening-services.html"
 									aria-expanded="false"
-									>Regular Garden Services</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="garden-troubleshooting.html"
-									aria-expanded="false"
-									>Landscaping</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="planting-and-growing.html"
-									aria-expanded="false"
-									>Planting and Growing</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="minor-tree-surgery.html"
-									aria-expanded="false"
-									>Minor Tree Surgery</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="allotment-care.html"
-									aria-expanded="false"
-									>Allotment Care</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="general-property-maintenance.html"
-									aria-expanded="false"
-									>Horticultural Solutions</a
+									>{{ item.name }}</NuxtLink
 								>
 							</div>
 						</li>
@@ -128,40 +104,17 @@
 								>Clients</a
 							>
 							<div class="dropdown-menu">
-								<a
+								<NuxtLink
+									:to="'/clients/' + item.slug"
+									v-for="(item, index) in $store.state.staticData[3][0]"
+									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
-									href="holiday-properties.html"
 									aria-expanded="false"
-									>Holiday Properties</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="town-houses.html"
-									aria-expanded="false"
-									>Town / Country Houses</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="large-estates.html"
-									aria-expanded="false"
-									>Large Estates</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="rural-land-owners.html"
-									aria-expanded="false"
-									>Estate Agents</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="page16.html"
-									aria-expanded="false"
-									>Allotment Holders</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="commercial-properties.html"
-									aria-expanded="false"
-									>Comercial Properties</a
+									>{{ item.name }}</NuxtLink
 								>
 							</div>
 						</li>
-						<li class="nav-item dropdown">
+						<li class="nav-item dropdown open">
 							<a
 								class="
 									nav-link
@@ -171,7 +124,7 @@
 									display-7
 								"
 								href="#"
-								aria-expanded="false"
+								aria-expanded="true"
 								data-toggle="dropdown-submenu"
 								><span
 									class="
@@ -182,44 +135,22 @@
 								></span
 								>Area Served</a
 							>
+
 							<div class="dropdown-menu">
-								<a
+								<NuxtLink
+									:to="'/locations/' + item.slug"
+									v-for="(item, index) in $store.state.staticData[1][0]"
+									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
-									href="area-served.html"
 									aria-expanded="false"
-									>Penzance</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="area-served.html"
-									aria-expanded="false"
-									>Newlyn</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="area-served.html"
-									aria-expanded="false"
-									>Marazion</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="area-served.html"
-									aria-expanded="false"
-									>St.Ives</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="area-served.html"
-									aria-expanded="false"
-									>Carbis Bay</a
-								><a
-									class="text-warning text-primary dropdown-item display-7"
-									href="area-served.html"
-									aria-expanded="false"
-									>Hayle</a
+									>{{ item.name }}</NuxtLink
 								>
 							</div>
 						</li>
 						<li class="nav-item">
 							<a
 								class="nav-link link text-warning text-primary display-7"
-								href="area-served.html"
+								href="/portfolio"
 								aria-expanded="false"
 								><span
 									class="
@@ -234,7 +165,7 @@
 						<li class="nav-item">
 							<a
 								class="nav-link link text-warning text-primary display-7"
-								href="contact.html"
+								href="/contact"
 								><span
 									class="
 										mobi-mbri mobi-mbri-phone

@@ -41,13 +41,13 @@ export default {
       { src: "/dropdown/js/nav-dropdown.js", body: true, type: 'text/javascript', },
       { src: "/dropdown/js/navbar-dropdown.js", body: true, type: 'text/javascript', },
       { src: "/touchswipe/jquery.touch-swipe.min.js", body: true, type: 'text/javascript', },
-      { src: "/parallax/jarallax.min.js", body: true, type: 'text/javascript', },
+
       { src: "/mobirise-shop/script.js", body: true, type: 'text/javascript', },
       { src: "/formstyler/jquery.formstyler.js", body: true, type: 'text/javascript', },
       { src: "/formstyler/jquery.formstyler.min.js", body: true, type: 'text/javascript', },
       { src: "/datepicker/jquery.datetimepicker.full.js", body: true, type: 'text/javascript', },
-      { src: "/theme/js/script.js", body: true, type: 'text/javascript', },
-      { src: "/gallery/player.min.js", body: true, type: 'text/javascript', },
+
+
       // { src: "/gallery/script.js", body: true, type: 'text/javascript', },
       { src: "/formoid/formoid.min.js", body: true, type: 'text/javascript', },
     ],
@@ -69,7 +69,7 @@ export default {
     "assets/socicon/css/styles.css",
     "assets/theme/css/style.css",
     "assets/mobirise/css/mbr-additional.css",
-    "assets/styles.pure.css",
+    // "assets/styles.pure.css",
 
   ],
 
@@ -112,7 +112,7 @@ export default {
   },
 
   //FOR MOBILE FRONTEND TESTING
-  
+
   // server: {
   //   port: 8000, // default: 3000
   //   host: '0.0.0.0' // default: localhost
@@ -120,38 +120,7 @@ export default {
 
 
 
-//COPIED FROM GOBORSHI 
-//Generate static pages from cockpit collection items 
-  
-  // build: {
 
-
-  //   generate: {
-  //     fallback: true,
-  //     routes() {
-
-
-  //       let team = axios.post("https://cockpit.goborshi.hackmylanguage.com/api/collections/get/team?token=641a6e0c88f94f7d2adadd184752e1",
-  //         {
-
-  //           fields: { slug: 1, _id: 0 }
-  //         })
-  //         .then((res) => {
-  //           return res.data.entries.map((entry) => {
-  //             return {
-  //               route: '/team/' + entry.slug
-  //             }
-  //           })
-  //         });
-
-  //       return Promise.all([team, featured_hotels, corona, hotels, google_places, tripadvisor_restuarants_borsh,]).then(values => {
-  //         return [...values[0], ...values[1], ...values[2], ...values[3], ...values[4], ...values[5],]
-  //       })
-  //     },
-  //   }
-
-
-  // }
 }
 
 

@@ -1,100 +1,14 @@
 <template>
 	<div>
-		<section class="header1 cid-rArXEdIV84" id="header01-1">
-			<div
-				class="mbr-overlay"
-				style="opacity: 0.2; background-color: rgb(35, 35, 35)"
-			></div>
-
-			<div class="container">
-				<div class="row justify-content-md-end">
-					<div class="mbr-white col-lg-6 col-md-12">
-						<h1
-							class="
-								mbr-section-title
-								align-left
-								mbr-bold
-								pb-4
-								mbr-fonts-style
-								display-1
-							"
-						>
-							Expert Gardening Services&nbsp;in West Cornwall
-						</h1>
-
-						<p class="mbr-text pb-4 align-left mbr-fonts-style display-7">
-							We are professional gardeners with extensive knowledge of plants,
-							techniques and challenges of Cornish garden and property
-							maintenance<br /><br />We offer fast, reliable and friendly
-							service at affordable rates. Call us today for a free consultation
-							chat over the phone<br />
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section
-			class="features3 woodm4_features3 cid-sTn5782uJc"
-			id="features03-k"
-		>
-			<div class="container">
-				<div class="media-container-row">
-					<div class="card p-3 col-12 col-md-6 col-lg-4">
-						<div class="card-img pb-3">
-							<span class="mbr-iconfont mobi-mbri-star mobi-mbri"></span>
-						</div>
-						<div class="card-box">
-							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
-								Experienced
-							</h4>
-							<p class="mbr-text mbr-fonts-style display-7">
-								We've got great plant knowledge and know how to take care of
-								your garden and keep it a&nbsp; flourishing green space&nbsp;
-							</p>
-						</div>
-					</div>
-
-					<div class="card p-3 col-12 col-md-6 col-lg-4">
-						<div class="card-img pb-3">
-							<span class="mbr-iconfont mobi-mbri-protect mobi-mbri"></span>
-						</div>
-						<div class="card-box">
-							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
-								Reliable
-							</h4>
-							<p class="mbr-text mbr-fonts-style display-7">
-								We're practical and pragmatic, great at troubleshooting all
-								kinds of problems.<br />
-								Transport and own tools provided
-							</p>
-						</div>
-					</div>
-
-					<div class="card p-3 col-12 col-md-6 col-lg-4">
-						<div class="card-img pb-3">
-							<span class="mbr-iconfont mobi-mbri-hearth mobi-mbri"></span>
-						</div>
-						<div class="card-box">
-							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
-								Passionate
-							</h4>
-							<p class="mbr-text mbr-fonts-style display-7">
-								We're proud to be gardeners able to work with our love of nature
-								and creating and maintaining aesthetic and functional outdoor
-								spaces.&nbsp;
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<HeaderImage
+			:props="[data.header_image.path, data.header_title, data.header_text]"
+		></HeaderImage>
 
 		<section class="content2 cid-rArXFNF7KR" id="content02-7">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 md-pb">
-						<h1
+						<h2
 							class="
 								mbr-section-title
 								align-left
@@ -104,122 +18,106 @@
 								display-2
 							"
 						>
-							Gardening Services&nbsp;
-						</h1>
+							{{ data.header_title }}
+						</h2>
 						<img
-							src="images/sam-posing-1-588x478.jpg"
+							:src="
+								$store.state.webRoot +
+								'/api/cockpit/image?token=' +
+								$store.state.tokens.image +
+								'&src=' +
+								data.article_image._id +
+								'&w=400&h=400&o=true'
+							"
 							alt="Sam posing over his fine allotment work"
 						/>
 					</div>
 
 					<div class="col-lg-6">
 						<p class="text1 pb-3 align-left mbr-fonts-style display-5">
-							<strong>What we do</strong>
+							<strong>{{ data.article_title }}</strong>
 						</p>
-						{{ data }}
+
 						<div
 							class="mbr-text pb-5 counter-container mbr-fonts-style display-7"
 						>
 							<ul>
-								<li><strong>Regular garden services</strong></li>
-								<li><strong>Landscaping</strong></li>
-								<li><strong>Small-tree surgery&nbsp;</strong></li>
-								<li><strong>Planting and growing with soil beds</strong></li>
-								<li>
-									<strong>Stone works; path, wall and step building</strong>
-								</li>
-								<li>
-									<strong
-										>Construction of fences, sheds and greenhouses&nbsp;</strong
-									>
-								</li>
-								<li>
-									<strong
-										>Removal of moss, ivy and lichens from roofs, and
-										walls</strong
-									>
-								</li>
-								<li>
-									<strong
-										>Allotments preparation, maintenance and harvest</strong
-									>
-								</li>
-								<li>
-									<strong
-										>Clearance and organisation of cluttered spaces</strong
-									>
-								</li>
-								<li>
-									<strong>Large and small property maintenance&nbsp;</strong>
+								<li v-for="(item, index) in data.article_list" :key="index">
+									<strong>{{ item.value }}</strong>
 								</li>
 							</ul>
 						</div>
 
 						<p class="text2 align-left mbr-fonts-style display-7">
-							We also offer a wide variety of handyman services such as painting
-							&amp; decorating, waste clearance and disposal, home repairs, tool
-							servicing, chainsaw log cutting and minor builders work.&nbsp;
+							{{ data.article_subtext }}
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
-
+		<!-- Icon bar -->
 		<section
-			class="features2 woodm4_features2 cid-sTPClM3ErQ"
-			id="features02-n"
+			class="features3 woodm4_features3 cid-sTn5782uJc"
+			id="features03-k"
 		>
 			<div class="container">
-				<div class="row"></div>
-			</div>
-
-			<div class="container">
-				<div class="row">
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										src="images/leo-allotment-digging-1-1000x729.jpg"
-										alt="Leo digging an allotment in Penzance"
-									/>
-								</div>
-								<div class="text-wrap"></div>
-							</div>
+				<div class="media-container-row">
+					<div class="card p-3 col-12 col-md-6 col-lg-4">
+						<div class="card-img pb-3">
+							<img
+								height="100px"
+								:src="$store.state.assetRoot + data.icon_bar.icon1.path"
+								alt=""
+							/>
+						</div>
+						<div class="card-box">
+							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
+								{{ data.icon_bar.title1 }}
+							</h4>
+							<p class="mbr-text mbr-fonts-style display-7">
+								{{ data.icon_bar.text1 }}
+							</p>
 						</div>
 					</div>
 
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										src="images/building-granite-step-2-992x974.jpg"
-										alt="Leo building a stepway"
-									/>
-								</div>
-								<div class="text-wrap"></div>
-							</div>
+					<div class="card p-3 col-12 col-md-6 col-lg-4">
+						<div class="card-img pb-3">
+							<img
+								height="100px"
+								:src="$store.state.assetRoot + data.icon_bar.icon2.path"
+								alt=""
+							/>
+						</div>
+						<div class="card-box">
+							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
+								{{ data.icon_bar.title2 }}
+							</h4>
+							<p class="mbr-text mbr-fonts-style display-7">
+								{{ data.icon_bar.text2 }}
+							</p>
 						</div>
 					</div>
 
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										src="images/sam-weeding-1-1000x855.jpg"
-										alt="Sam weeding a garden in Penzance"
-									/>
-								</div>
-								<div class="text-wrap"></div>
-							</div>
+					<div class="card p-3 col-12 col-md-6 col-lg-4">
+						<div class="card-img pb-3">
+							<img
+								height="100px"
+								:src="$store.state.assetRoot + data.icon_bar.icon3.path"
+								alt=""
+							/>
+						</div>
+						<div class="card-box">
+							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
+								{{ data.icon_bar.title3 }}
+							</h4>
+							<p class="mbr-text mbr-fonts-style display-7">
+								{{ data.icon_bar.text2 }}
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
 		<section
 			class="accordion2 woodm4_accordion2 cid-sTnbnpBasn"
 			id="accordion02-l"
@@ -238,7 +136,7 @@
 									display-2
 								"
 							>
-								Providing essential service to your property
+								{{ data.service.title }}
 							</h1>
 							<h2
 								class="
@@ -248,23 +146,21 @@
 									display-7
 								"
 							>
-								Gardens are constantly growing and changing shape. Weeds and
-								invasive species can challenge the growth of your prized beds
-								and shrubs and quickly take over. Maintaining and beautifying
-								your garden are the best ways to enjoy your outdoor space and
-								keep your home&nbsp; looking alive.<br /><br />We are proud to
-								be tough, organised, hardworking all-weather gardeners. We
-								provide a faster and more efficient service than lone gardeners
-								and cheaper quotes than larger gardening companies. We are
-								highly in demand for our specialist knowledge and upstanding
-								local reputation.
+								{{ data.service.text }}
 							</h2>
 						</div>
 					</div>
 
 					<div class="col-lg-6">
 						<img
-							src="images/crystal-jo-pkctua-crao-unsplash-1499x999.jpg"
+							:src="
+								$store.state.webRoot +
+								'/api/cockpit/image?token=' +
+								$store.state.tokens.image +
+								'&src=' +
+								data.service.image._id +
+								'&w=600&h=600&o=true'
+							"
 							alt="Trimming lower branches of a tree"
 						/>
 
@@ -286,7 +182,7 @@
 										aria-controls="collapse1"
 									>
 										<h4 class="mbr-fonts-style display-5">
-											What we charge&nbsp;&nbsp;<span
+											{{ data.service.dropdown_title1 }}&nbsp;&nbsp;<span
 												class="sign mbr-iconfont mbri-arrow-down inactive"
 												><br
 											/></span>
@@ -302,11 +198,7 @@
 								>
 									<div class="panel-body p-4">
 										<p class="mbr-fonts-style panel-text display-7">
-											For small local clients around Penzance: We work on a £15
-											per hour, per gardener&nbsp;<br />
-											basis. <br /><br />For larger scale and more specialised
-											jobs and those based further up-county: please contact us
-											to get a price quote.&nbsp;
+											{{ data.service.dropdown_text1 }}
 										</p>
 									</div>
 								</div>
@@ -323,7 +215,7 @@
 										aria-controls="collapse2"
 									>
 										<h4 class="mbr-fonts-style display-5">
-											Availability&nbsp;<span
+											{{ data.service.dropdown_title2 }}&nbsp;<span
 												class="sign mbr-iconfont mbri-arrow-down inactive"
 												><br
 											/></span>
@@ -339,9 +231,7 @@
 								>
 									<div class="panel-body p-4">
 										<p class="mbr-fonts-style panel-text display-7">
-											We usually work from Monday to Friday. However, we can be
-											flexible to do emergency jobs on weekends at a higher
-											rate.&nbsp;
+											{{ data.service.dropdown_text2 }}
 										</p>
 									</div>
 								</div>
@@ -358,8 +248,8 @@
 										aria-controls="collapse3"
 									>
 										<h4 class="mbr-fonts-style display-5">
-											Areas Served<span
-												class="sign mbr-iconfont mbri-arrow-down inactive"
+											{{ data.service.dropdown_title3
+											}}<span class="sign mbr-iconfont mbri-arrow-down inactive"
 												><br
 											/></span>
 										</h4>
@@ -374,13 +264,66 @@
 								>
 									<div class="panel-body p-4">
 										<p class="mbr-fonts-style panel-text display-7">
-											We are based in Penzance and work with clients in the
-											surrounding area. We operate within a general 15 mile
-											radius of the town and usually don't travel further than
-											Camborne for regular garden jobs.&nbsp;
+											{{ data.service.dropdown_text3 }}
 										</p>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery -->
+		<section
+			class="features2 woodm4_features2 cid-sTPxC1s93i"
+			id="features02-m"
+		>
+			<div class="container">
+				<div class="row"></div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="card align-center col-12 col-md-6 col-lg-4">
+						<div class="panel-item">
+							<div class="card-block">
+								<div class="photo">
+									<img
+										src="images/leo-drilling-hole-2-1000x1009.jpg"
+										alt="Leo drilling a hole in St.Ives"
+									/>
+								</div>
+								<div class="text-wrap"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card align-center col-12 col-md-6 col-lg-4">
+						<div class="panel-item">
+							<div class="card-block">
+								<div class="photo">
+									<img
+										src="images/cutting-hedge-1-556x417-result.jpg"
+										alt="Leo shaping a hedge in Newlyn"
+									/>
+								</div>
+								<div class="text-wrap"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card align-center col-12 col-md-6 col-lg-4">
+						<div class="panel-item">
+							<div class="card-block">
+								<div class="photo">
+									<img
+										src="images/leaf-blower-1-1018x844.jpg"
+										alt="Sam with leaf blower in Lelant"
+									/>
+								</div>
+								<div class="text-wrap"></div>
 							</div>
 						</div>
 					</div>
@@ -393,17 +336,10 @@
 				<div class="row">
 					<div class="title col-12 pb-5 align-center">
 						<h2 class="pb-3 mbr-bold mbr-fonts-style display-2">
-							Meet the Lions
+							{{ data.about_title }}
 						</h2>
 						<h3 class="mbr-section-subtitle pb-3 mbr-fonts-style display-7">
-							We are Sam and Leo.<br />
-							<br />Two close family friends and neighbours in Penzance with
-							unique experiences and complementary thinking skills, swiftly
-							solving practical problems and naturally working in synchronous
-							harmony to make quick and proper work of garden jobs.
-							<br /><br />We take pride in our collaborative gardening success
-							with every day bringing new and exciting projects and challenges
-							as we loyally serve our client base across West Cornwall<br /><br />
+							{{ data.about_text }}<br /><br />
 						</h3>
 					</div>
 				</div>
@@ -416,7 +352,14 @@
 							<div class="card-block">
 								<div class="testimonial-photo">
 									<img
-										src="images/leo-gardener-1-315x337.jpg"
+										:src="
+											$store.state.webRoot +
+											'/api/cockpit/image?token=' +
+											$store.state.tokens.image +
+											'&src=' +
+											data.team.image1._id +
+											'&w=500&h=600&o=true'
+										"
 										alt="Leo posing over his fine work"
 									/>
 								</div>
@@ -429,7 +372,7 @@
 											display-2
 										"
 									>
-										Leo&nbsp;
+										{{ data.team.name1 }}&nbsp;
 									</h3>
 									<h4
 										class="
@@ -439,20 +382,14 @@
 											display-7
 										"
 									>
-										Gardener, jeweller, metallurgist &amp; chemist&nbsp;
+										{{ data.team.title1 }}
 									</h4>
 									<h4 class="phone pb-1 mbr-black mbr-fonts-style display-7">
-										Call<strong> 07884 255127</strong>
+										Call<strong> {{ data.team.number1 }}</strong>
 									</h4>
 								</div>
 								<p class="mbr-text mbr-fonts-style display-4">
-									"I could spend hours talking about plant species, Bob Dylan,
-									ferrous metals and black holes" <br /><br />I've been a
-									gardener 18 years, it has kept me sane in a world of constant
-									change. I grew up memorising encyclopaedias and have an
-									extensive botanical knowledge and complex understanding of the
-									natural sciences. I trained at the RHS in Camborne and am
-									highly in demand for my advanced all-round gardening skills.
+									{{ data.team.text1 }}
 								</p>
 							</div>
 						</div>
@@ -463,7 +400,14 @@
 							<div class="card-block">
 								<div class="testimonial-photo">
 									<img
-										src="images/sam-gardener-1-300x419.jpg"
+										:src="
+											$store.state.webRoot +
+											'/api/cockpit/image?token=' +
+											$store.state.tokens.image +
+											'&src=' +
+											data.team.image2._id +
+											'&w=500&h=600&o=true'
+										"
 										alt="Sam weeding an allotment bed"
 									/>
 								</div>
@@ -476,7 +420,7 @@
 											display-2
 										"
 									>
-										Sam
+										{{ data.team.name2 }}
 									</h3>
 									<h4
 										class="
@@ -486,22 +430,15 @@
 											display-7
 										"
 									>
-										Gardener, linguist, artist &amp; web designer
+										{{ data.team.title2 }}
 									</h4>
 									<h4 class="phone pb-1 mbr-black mbr-fonts-style display-7">
-										Call <strong>07507 539688</strong>&nbsp;
+										Call <strong>{{ data.team.number2 }}</strong
+										>&nbsp;
 									</h4>
 								</div>
 								<p class="mbr-text mbr-fonts-style display-4">
-									"I just love to be working outdoors, smiling and getting sh*t
-									done"&nbsp;<br /><br />&nbsp;I grew up gardening at home and
-									have always been handy with tools and excellent with
-									timekeeping and correspondence.<br /><br />
-									I've an eye for aesthetic outdoor spaces and am highly
-									creative. I've had many years of experience of travelling
-									abroad and working on gardens and permaculture and
-									eco-construction projects; learning from other garden cultures
-									and climates and learning a wide range of practical skills.
+									{{ data.team.text2 }}
 								</p>
 							</div>
 						</div>
@@ -510,9 +447,12 @@
 			</div>
 		</section>
 
-		<Services></Services>
+		<Portfolio :props="blog"></Portfolio>
+
+		<Services> </Services>
 		<Clients></Clients>
 
+		<!-- Form -->
 		<section class="map1 woodm4_map1 cid-sVVvvpJ9ww" id="map01-8q">
 			<div class="container">
 				<div class="row content">
@@ -581,7 +521,7 @@
 				</div>
 			</div>
 		</section>
-		<IconSlogans></IconSlogans>
+
 		<section class="form form1 woodm4_form1 cid-sUXFlpoYd0" id="form01-o">
 			<div class="container">
 				<div class="row">
@@ -725,60 +665,24 @@
 				</div>
 			</div>
 		</section>
+		<IconSlogans></IconSlogans>
 
 		<section
-			class="features2 woodm4_features2 cid-sTPxC1s93i"
-			id="features02-m"
+			class="image1 woodm4_image1 cid-sUXVdjxvR1"
+			id="image01-p"
+			:style="
+				'background-image: url(' +
+				$store.state.assetRoot +
+				data.bottom_image.path +
+				')'
+			"
 		>
-			<div class="container">
-				<div class="row"></div>
-			</div>
+			<div
+				class="mbr-overlay"
+				style="opacity: 0.5; background-color: rgb(35, 35, 35)"
+			></div>
 
-			<div class="container">
-				<div class="row">
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										src="images/leo-drilling-hole-2-1000x1009.jpg"
-										alt="Leo drilling a hole in St.Ives"
-									/>
-								</div>
-								<div class="text-wrap"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										src="images/cutting-hedge-1-556x417-result.jpg"
-										alt="Leo shaping a hedge in Newlyn"
-									/>
-								</div>
-								<div class="text-wrap"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										src="images/leaf-blower-1-1018x844.jpg"
-										alt="Sam with leaf blower in Lelant"
-									/>
-								</div>
-								<div class="text-wrap"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="container"></div>
 		</section>
 	</div>
 </template>
@@ -798,18 +702,21 @@ export default {
 	},
 	data() {
 		return {
-			data: this.$store.state.pageData,
+			data: this.$store.state.pageData[0],
+			blog: this.$store.state.pageData[1],
 			posts: [],
 			error: "",
 		};
 	},
 
-	middleware: "services",
+	middleware: "home",
 
 	components: {
 		Clients: () => import("@/components/Clients"),
 		IconSlogans: () => import("@/components/IconSlogans"),
 		Services: () => import("@/components/Services"),
+		Portfolio: () => import("@/components/Portfolio"),
+		HeaderImage: () => import("@/components/HeaderImage"),
 	},
 
 	jsonld() {
