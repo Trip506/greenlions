@@ -3,7 +3,7 @@
 		<HeaderImage
 			:props="[
 				data[0].meta_image.path,
-				'Services',
+				'Clients',
 				'Professional services in Cornwall',
 			]"
 		></HeaderImage>

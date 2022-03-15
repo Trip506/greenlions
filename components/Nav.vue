@@ -138,7 +138,7 @@
 
 							<div class="dropdown-menu">
 								<NuxtLink
-									:to="'/locations/' + item.slug"
+									:to="'/area-served/' + item.slug"
 									v-for="(item, index) in $store.state.staticData[1][0]"
 									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
