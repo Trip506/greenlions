@@ -1,5 +1,5 @@
 export default async function ({ store, $axios, route }) {
-    let collection = "services";
+    let collection = "clients";
     if (route.params.id) {
 
         try {
