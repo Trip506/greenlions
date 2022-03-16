@@ -83,7 +83,7 @@ export default {
 		Contact: () => import("@/components/Contact"),
 		Services: () => import("@/components/Services"),
 		Clients: () => import("@/components/Clients"),
-		// ClientsAndServices: () => import("@/components/ClientsAndServices"),
+
 		HeaderImage: () => import("@/components/HeaderImage"),
 	},
 

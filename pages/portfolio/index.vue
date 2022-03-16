@@ -9,7 +9,9 @@
 		></HeaderImage>
 
 		<Items :props="[entries, '/portfolio/']"></Items>
-		<!-- <ClientsAndServices></ClientsAndServices> -->
+
+		<Clients></Clients>
+		<Services></Services>
 	</div>
 </template>
 
@@ -39,7 +41,8 @@ export default {
 	components: {
 		Items: () => import("@/components/Items"),
 		Portfolio: () => import("@/components/Portfolio"),
-		ClientsAndServices: () => import("@/components/ClientsAndServices"),
+		Clients: () => import("@/components/Clients"),
+		Services: () => import("@/components/Services"),
 	},
 
 	//get strapi data

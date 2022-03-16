@@ -11,7 +11,7 @@
 		<Items :props="[data, '/area-served/']"></Items>
 
 		<Contact />
-		<!-- <ClientsAndServices></ClientsAndServices> -->
+
 		<Clients></Clients>
 		<Services></Services>
 	</div>
