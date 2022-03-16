@@ -1,5 +1,6 @@
 <template lang="">
     <div>
+	
         		<section
 			class="features4 woodm4_features4 cid-sTPxC1s93i"
 			id="features04-9s"
@@ -7,11 +8,12 @@
 			<div class="container">
 				<div class="row">
 					<div v-for="(item, index) in props[0]" :key="index" class="card align-center col-12 col-md-6 md-pb col-lg-4">
+						
 						<div class="panel-item">
 							<div class="card-block">
 								<div class="photo">
 									<img
-									:src="$store.state.webRoot+'/api/cockpit/image?token='+$store.state.tokens.image +'&src='+item.meta_image._id+'&w=800&h=600&o=true'"
+									:src="$store.state.webRoot+'/api/cockpit/image?token='+$store.state.tokens.image +'&src='+item.header_image._id+'&w=800&h=600&o=true'"
 										alt=""
 									/>
 								</div>
@@ -28,7 +30,7 @@
 										{{item.name}}
 									</h2>
 									<p class="mbr-text mbr-fonts-style display-7">
-										{{item.meta_description}}
+										{{item.header_text}}
 									</p>
 									<div class="link-wrap pt-2">
 										<h4

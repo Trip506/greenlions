@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<HeaderImage
-			:props="[data.header_image.path, data.name, data.header_text]"
+			:props="[data.meta_image.path, data.name, data.header_text]"
 		></HeaderImage>
 
 		<section
@@ -67,8 +67,9 @@
 				</div>
 			</div>
 		</section>
-		<Services></Services>
-		<Clients></Clients>
+		<Services />
+		<Clients />
+		<Contact />
 	</div>
 </template>
 
@@ -83,10 +84,9 @@ export default {
 		Contact: () => import("@/components/Contact"),
 		Services: () => import("@/components/Services"),
 		Clients: () => import("@/components/Clients"),
-		// ClientsAndServices: () => import("@/components/ClientsAndServices"),
 		HeaderImage: () => import("@/components/HeaderImage"),
 	},
 
-	middleware: "locations",
+	middleware: "services",
 };
 </script>

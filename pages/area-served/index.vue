@@ -2,7 +2,7 @@
 	<div>
 		<HeaderImage
 			:props="[
-				data[0].meta_image.path,
+				data[0].header_image.path,
 				'Locations',
 				'Professional services in Cornwall',
 			]"
@@ -11,8 +11,9 @@
 		<Items :props="[data, '/area-served/']"></Items>
 
 		<Contact />
-
-		<Clients />
+		<!-- <ClientsAndServices></ClientsAndServices> -->
+		<Clients></Clients>
+		<Services></Services>
 	</div>
 </template>
 
@@ -40,6 +41,7 @@ export default {
 
 	components: {
 		Contact: () => import("@/components/Contact"),
+		Services: () => import("@/components/Services"),
 		Clients: () => import("@/components/Clients"),
 		Items: () => import("@/components/Items"),
 	},

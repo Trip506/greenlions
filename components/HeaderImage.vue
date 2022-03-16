@@ -28,7 +28,7 @@
 								<!-- Header title -->
 								{{ props[1] }}
 							</h1>
-							<p class="mbr-text pb-4 align-left mbr-fonts-style display-7">
+							<p class="mbr-text pb-4 align-left mbr-fonts-style display-5">
 								<!-- Header text -->
 								{{ props[2] }}
 							</p>

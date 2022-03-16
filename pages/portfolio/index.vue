@@ -2,13 +2,14 @@
 	<div>
 		<HeaderImage
 			:props="[
-				entries[0].meta_image.path,
+				entries[0].header_image.path,
 				'Portfolio of Gardening',
 				'See our recent accomplishments on the job',
 			]"
 		></HeaderImage>
 
-		<Portfolio :props="entries"></Portfolio>
+		<Items :props="[entries, '/portfolio/']"></Items>
+		<!-- <ClientsAndServices></ClientsAndServices> -->
 	</div>
 </template>
 
@@ -36,7 +37,9 @@ export default {
 	},
 
 	components: {
+		Items: () => import("@/components/Items"),
 		Portfolio: () => import("@/components/Portfolio"),
+		ClientsAndServices: () => import("@/components/ClientsAndServices"),
 	},
 
 	//get strapi data

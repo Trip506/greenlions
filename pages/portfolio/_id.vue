@@ -45,9 +45,10 @@
 			</div>
 		</section>
 
-		<Portfolio :props="entries"></Portfolio>
+		<Items :props="[entries, '/portfolio/']"></Items>
 		<Services> </Services>
 		<Clients></Clients>
+		<Contact></Contact>
 	</div>
 </template>
 
@@ -59,6 +60,7 @@ export default {
 		HeaderImage: () => import("@/components/HeaderImage"),
 		Clients: () => import("@/components/Clients"),
 		Services: () => import("@/components/Services"),
+		Contact: () => import("@/components/Contact"),
 	},
 
 	data() {

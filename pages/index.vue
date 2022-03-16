@@ -4,57 +4,6 @@
 			:props="[data.header_image.path, data.header_title, data.header_text]"
 		></HeaderImage>
 
-		<section class="content2 cid-rArXFNF7KR" id="content02-7">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 md-pb">
-						<h2
-							class="
-								mbr-section-title
-								align-left
-								mbr-bold mbr-black
-								pb-5
-								mbr-fonts-style
-								display-2
-							"
-						>
-							{{ data.header_title }}
-						</h2>
-						<img
-							:src="
-								$store.state.webRoot +
-								'/api/cockpit/image?token=' +
-								$store.state.tokens.image +
-								'&src=' +
-								data.article_image._id +
-								'&w=400&h=400&o=true'
-							"
-							alt="Sam posing over his fine allotment work"
-						/>
-					</div>
-
-					<div class="col-lg-6">
-						<p class="text1 pb-3 align-left mbr-fonts-style display-5">
-							<strong>{{ data.article_title }}</strong>
-						</p>
-
-						<div
-							class="mbr-text pb-5 counter-container mbr-fonts-style display-7"
-						>
-							<ul>
-								<li v-for="(item, index) in data.article_list" :key="index">
-									<strong>{{ item.value }}</strong>
-								</li>
-							</ul>
-						</div>
-
-						<p class="text2 align-left mbr-fonts-style display-7">
-							{{ data.article_subtext }}
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
 		<!-- Icon bar -->
 		<section
 			class="features3 woodm4_features3 cid-sTn5782uJc"
@@ -118,6 +67,59 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="content2 cid-rArXFNF7KR" id="content02-7">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 md-pb">
+						<h2
+							class="
+								mbr-section-title
+								align-left
+								mbr-bold mbr-black
+								pb-5
+								mbr-fonts-style
+								display-2
+							"
+						>
+							{{ data.header_title }}
+						</h2>
+						<img
+							:src="
+								$store.state.webRoot +
+								'/api/cockpit/image?token=' +
+								$store.state.tokens.image +
+								'&src=' +
+								data.article_image._id +
+								'&w=400&h=400&o=true'
+							"
+							alt="Sam posing over his fine allotment work"
+						/>
+					</div>
+
+					<div class="col-lg-6">
+						<p class="text1 pb-3 align-left mbr-fonts-style display-5">
+							<strong>{{ data.article_title }}</strong>
+						</p>
+
+						<div
+							class="mbr-text pb-5 counter-container mbr-fonts-style display-7"
+						>
+							<ul>
+								<li v-for="(item, index) in data.article_list" :key="index">
+									<strong>{{ item.value }}</strong>
+								</li>
+							</ul>
+						</div>
+
+						<p class="text2 align-left mbr-fonts-style display-7">
+							{{ data.article_subtext }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section
 			class="accordion2 woodm4_accordion2 cid-sTnbnpBasn"
 			id="accordion02-l"
@@ -291,7 +293,14 @@
 							<div class="card-block">
 								<div class="photo">
 									<img
-										src="images/leo-drilling-hole-2-1000x1009.jpg"
+										:src="
+											$store.state.webRoot +
+											'/api/cockpit/image?token=' +
+											$store.state.tokens.image +
+											'&src=' +
+											data.gallery1.image1._id +
+											'&w=600&h=400&o=true'
+										"
 										alt="Leo drilling a hole in St.Ives"
 									/>
 								</div>
@@ -305,7 +314,14 @@
 							<div class="card-block">
 								<div class="photo">
 									<img
-										src="images/cutting-hedge-1-556x417-result.jpg"
+										:src="
+											$store.state.webRoot +
+											'/api/cockpit/image?token=' +
+											$store.state.tokens.image +
+											'&src=' +
+											data.gallery1.image2._id +
+											'&w=600&h=400&o=true'
+										"
 										alt="Leo shaping a hedge in Newlyn"
 									/>
 								</div>
@@ -319,7 +335,14 @@
 							<div class="card-block">
 								<div class="photo">
 									<img
-										src="images/leaf-blower-1-1018x844.jpg"
+										:src="
+											$store.state.webRoot +
+											'/api/cockpit/image?token=' +
+											$store.state.tokens.image +
+											'&src=' +
+											data.gallery1.image3._id +
+											'&w=600&h=400&o=true'
+										"
 										alt="Sam with leaf blower in Lelant"
 									/>
 								</div>
@@ -330,7 +353,7 @@
 				</div>
 			</div>
 		</section>
-
+		<IconSlogans></IconSlogans>
 		<section class="team1 woodm4_team1 cid-sThGNiePHt" id="team01-j">
 			<div class="container">
 				<div class="row">
@@ -344,8 +367,9 @@
 					</div>
 				</div>
 			</div>
+			<!-- Team -->
 
-			<div class="container">
+			<div class="container pt-5">
 				<div class="row">
 					<div class="mbr-testimonial align-center col-12 col-md-6 md-pb">
 						<div class="panel-item">
@@ -447,243 +471,15 @@
 			</div>
 		</section>
 
-		<Portfolio :props="blog"></Portfolio>
+		<Items :props="[blog, '/portfolio/']"></Items>
 
-		<Services> </Services>
+		<Contact></Contact>
+		<ContactForm></ContactForm>
+
 		<Clients></Clients>
+		<Services></Services>
 
-		<!-- Form -->
-		<section class="map1 woodm4_map1 cid-sVVvvpJ9ww" id="map01-8q">
-			<div class="container">
-				<div class="row content">
-					<div class="col-12 col-lg-6 col-md-12 md-pb">
-						<h2
-							class="
-								mbr-section-title
-								align-left
-								mbr-bold
-								pb-4
-								mbr-fonts-style
-								display-2
-							"
-						>
-							Contact us
-						</h2>
-						<div class="google-map">
-							<iframe
-								frameborder="0"
-								style="border: 0"
-								src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNveGQ9bfpKFwWzQLLftrR9hNiHwdqQG8&amp;q=Cornwall"
-								allowfullscreen=""
-							></iframe>
-						</div>
-					</div>
-					<div class="col-12 col-lg-6 col-md-12 mbr-fonts-style display-5">
-						<h3
-							class="
-								mbr-section-title
-								align-left
-								mbr-bold
-								pb-4
-								mbr-fonts-style
-								display-5
-							"
-						>
-							We are in Penzance, Cornwall
-						</h3>
-
-						<p class="mbr-text pb-4 align-left mbr-fonts-style display-7">
-							We serve clients all over West Penwith.<br />From small town
-							gardens to large estates and land projects.&nbsp;<br />Give us a
-							ring to see what we can do for you!<br />
-						</p>
-
-						<p class="mbr-text">
-							<strong>Phone:</strong><br />Leo: 07884 255127<br />Sam: 07507
-							539688<strong><br /></strong><br /><strong>Email:</strong
-							><br />info@greenlionsgardening.com<br /><br /><strong
-								>Social Media:</strong
-							><br /><a
-								href="https://www.facebook.com/The-Green-Lions-Gardening-Services-in-West-Penwith-112466311333432"
-								class="text-primary"
-								>Facebook</a
-							><br /><a
-								href="https://nextdoor.co.uk/pages/green-lions-penzance-gardening-services/"
-								class="text-primary"
-								>Nextdoor</a
-							><br /><a
-								href="https://nextdoor.co.uk/pages/green-lions-penzance-gardening-services/"
-								class="text-primary"
-								><br /></a
-							><br />
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="form form1 woodm4_form1 cid-sUXFlpoYd0" id="form01-o">
-			<div class="container">
-				<div class="row">
-					<div
-						class="col-lg-10 col-md-12 mx-auto mbr-form"
-						data-form-type="formoid"
-					>
-						<!--Formbuilder Form-->
-						<form
-							action="https://mobirise.eu/"
-							method="POST"
-							class="mbr-form form-with-styler"
-							data-form-title="Form Name"
-						>
-							<input
-								type="hidden"
-								name="email"
-								data-form-email="true"
-								value="oEAaGK6QOXzLTIrwKlhtPcQz0ATMjAcs+sC2TOmY9+bw8tpdj3qujSF2Y1cZDK1Dhf0Vpdc3/byARep6LxlG0rs/5OiHFKPAQbTTbiwIXC69QCN3pztMg1e5hG2vLUZG.hTRfoW/kF1HnVA8UDMxQmS1l/tFNNEd/e9f7i0TWL9qflI+80+rXGUcF+pr8zfIyjZvLyDpfxQ2vf+hdG8CZG+LDJ/2IC3mGS+wXTUqh81gZLmAWIA/TAm6T8RR26Inr"
-							/>
-							<div class="form-row">
-								<div
-									hidden="hidden"
-									data-form-alert=""
-									class="alert alert-success col-12"
-								>
-									Thanks for filling out the form! We'll get back to you soon!
-								</div>
-								<div
-									hidden="hidden"
-									data-form-alert-danger=""
-									class="alert alert-danger col-12"
-								>
-									Oops...! some problem!
-								</div>
-							</div>
-							<div class="dragArea form-row">
-								<div class="col-lg-12 col-md-12 col-sm-12" style="">
-									<h5 class="mbr-fonts-style pb-2 display-2">Contact Us</h5>
-								</div>
-								<div class="col-lg-12 col-md-12 col-sm-12">
-									<p class="mbr-fonts-style pb-5 display-7">
-										Don't hesitate to reach out to us if you have any
-										questions&nbsp;
-									</p>
-								</div>
-								<div
-									class="col-lg-12 col-md-12 col-sm-12 form-group align-center"
-								>
-									<div class="form-row">
-										<div class="col-lg-6 col-md-12 col-sm-12 form-group">
-											<input
-												type="text"
-												name="nameFirst"
-												placeholder="First Name"
-												data-form-field="nameFirst"
-												class="form-control text-multiple"
-												value=""
-												id="nameFirst-form01-o"
-											/>
-										</div>
-										<div class="col-lg-6 col-md-12 col-sm-12 form-group">
-											<input
-												type="text"
-												name="nameLast"
-												placeholder="Last Name"
-												data-form-field="nameLast"
-												class="form-control text-multiple"
-												value=""
-												id="nameLast-form01-o"
-											/>
-										</div>
-									</div>
-								</div>
-								<div
-									data-for="phone"
-									class="col-lg-6 col-md-12 col-sm-12 form-group"
-									style=""
-								>
-									<input
-										type="tel"
-										name="phone"
-										placeholder="Phone"
-										data-form-field="phone"
-										class="form-control display-7"
-										pattern="*"
-										value=""
-										id="phone-form01-o"
-									/>
-								</div>
-
-								<div
-									class="col-lg-6 col-md-12 check col-sm-12 form-group"
-									data-for="checkbox"
-								>
-									<div class="form-control-label">
-										<label
-											for="checkbox"
-											class="mbr-fonts-style display-7"
-										></label>
-									</div>
-									<div class="form-check form-check-inline">
-										<label class="form-check-label display-7"></label>
-									</div>
-									<div class="form-check form-check-inline">
-										<label class="form-check-label display-7"></label>
-									</div>
-									<div class="form-check form-check-inline">
-										<label class="form-check-label display-7"></label>
-									</div>
-								</div>
-								<div
-									class="col-lg-6 col-md-12 col-sm-12 form-group"
-									data-for="message"
-								>
-									<textarea
-										name="message"
-										placeholder="Message"
-										data-form-field="message"
-										class="form-control display-7"
-										id="message-form01-o"
-									></textarea>
-								</div>
-								<div class="col-auto m-auto pt-5">
-									<button
-										type="submit"
-										class="btn btn-primary-outline display-7"
-									>
-										SUBMIT
-									</button>
-								</div>
-								<div class="col-lg-12 col-md-12 col-sm-12">
-									<h4 class="mbr-fonts-style align-center pt-4 display-4">
-										Remember: It's always quicker to just call us!&nbsp;
-									</h4>
-								</div>
-							</div>
-						</form>
-						<!--Formbuilder Form-->
-					</div>
-				</div>
-			</div>
-		</section>
-		<IconSlogans></IconSlogans>
-
-		<section
-			class="image1 woodm4_image1 cid-sUXVdjxvR1"
-			id="image01-p"
-			:style="
-				'background-image: url(' +
-				$store.state.assetRoot +
-				data.bottom_image.path +
-				')'
-			"
-		>
-			<div
-				class="mbr-overlay"
-				style="opacity: 0.5; background-color: rgb(35, 35, 35)"
-			></div>
-
-			<div class="container"></div>
-		</section>
+		<BackgroundImage :props="data.bottom_image.path"></BackgroundImage>
 	</div>
 </template>
 
@@ -712,11 +508,14 @@ export default {
 	middleware: "home",
 
 	components: {
-		Clients: () => import("@/components/Clients"),
 		IconSlogans: () => import("@/components/IconSlogans"),
-		Services: () => import("@/components/Services"),
+
 		Portfolio: () => import("@/components/Portfolio"),
 		HeaderImage: () => import("@/components/HeaderImage"),
+		ContactForm: () => import("@/components/ContactForm"),
+		Services: () => import("@/components/Services"),
+		Clients: () => import("@/components/Clients"),
+		BackgroundImage: () => import("@/components/BackgroundImage"),
 	},
 
 	jsonld() {

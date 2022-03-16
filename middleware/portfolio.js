@@ -22,7 +22,7 @@ export default async function ({ store, $axios, route }) {
                 "?token=" +
                 store.state.tokens.collections,
                 {
-                    fields: { meta_description: 1, meta_image: 1, name: 1, slug: 1 }
+                    fields: { header_text: 1, header_image: 1, name: 1, slug: 1 }
                 }
             );
 
@@ -51,7 +51,7 @@ export default async function ({ store, $axios, route }) {
                     store.state.tokens.collections,
 
                     {
-                        fields: { meta_description: 1, meta_image: 1, name: 1, slug: 1 }
+                        fields: { header_text: 1, header_image: 1, name: 1, slug: 1 }
                     }
                 )
                 .then(res => {

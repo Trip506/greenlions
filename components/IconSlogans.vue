@@ -6,7 +6,7 @@
 		>
 			<div class="container">
 				<div class="media-container-row">
-					<div class="card p-3 col-12 col-md-6 col-lg-4">
+					<div class="card p-3 mt-3 col-12 col-md-6 col-lg-4">
 						<div class="card-img pb-3">
 							<span
 								class="mbr-iconfont mobi-mbri-protect mobi-mbri"

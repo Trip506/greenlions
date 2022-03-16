@@ -2,7 +2,7 @@
 	<div>
 		<HeaderImage
 			:props="[
-				data[0].meta_image.path,
+				data[0].header_image.path,
 				'Clients',
 				'Professional services in Cornwall',
 			]"
@@ -10,9 +10,9 @@
 
 		<Items :props="[data, '/services/']"></Items>
 
-		<Contact />
-
+		<Services></Services>
 		<Clients />
+		<Contact />
 	</div>
 </template>
 
@@ -39,6 +39,7 @@ export default {
 	middleware: "clients",
 
 	components: {
+		Services: () => import("@/components/Services"),
 		Contact: () => import("@/components/Contact"),
 		Clients: () => import("@/components/Clients"),
 		Items: () => import("@/components/Items"),

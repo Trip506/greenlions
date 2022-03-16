@@ -29,6 +29,10 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Reem+Kufi:400,500,600,700&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i&display=swap'
       }
     ],
 
@@ -86,6 +90,10 @@ export default {
   buildModules: [
     '@nuxtjs/dotenv'
   ],
+
+  build: {
+    standalone: true,
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

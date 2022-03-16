@@ -2,7 +2,7 @@
 	<div>
 		<HeaderImage
 			:props="[
-				data[0].meta_image.path,
+				data[0].header_image.path,
 				'Services',
 				'Professional services in Cornwall',
 			]"

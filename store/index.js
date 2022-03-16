@@ -53,6 +53,7 @@ export const actions = {
         let collection1 = "locations";
         let collection2 = "blog";
         let collection3 = "clients";
+        let contact = "contact"
 
         let request = await axios.post(
             state.webRoot +
@@ -92,9 +93,18 @@ export const actions = {
 
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
+        let request4 = await axios.post(
+            state.webRoot +
+            "/api/singletons/get/" +
+            contact +
+            "?token=" +
+            state.tokens.singletons,
+
+            {}
+        );
 
 
-        await commit("setStaticData", [[request.data.entries], [request1.data.entries], [request2.data.entries], [request3.data.entries]])
+        await commit("setStaticData", [[request.data.entries], [request1.data.entries], [request2.data.entries], [request3.data.entries], request4.data])
 
     },
 }

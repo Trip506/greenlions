@@ -31,7 +31,7 @@
 						<span class="navbar-logo">
 							<a href="/">
 								<img
-									src="images/logomark-7.svg"
+									src="/images/logo-gl.svg"
 									alt="Green Lions Gardening Primary Logo"
 									style="height: 3.8rem"
 								/>
@@ -41,7 +41,7 @@
 							><a
 								class="navbar-caption text-black text-primary display-2"
 								href="/"
-								>The Green Lions&nbsp;</a
+								>Green Lions Gardening</a
 							></span
 						>
 					</div>
