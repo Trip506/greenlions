@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<HeaderImage
-			:props="[data.meta_image.path, data.name, data.header_text]"
+			:props="[data.header_image.path, data.name, data.header_text]"
 		></HeaderImage>
 
 		<section

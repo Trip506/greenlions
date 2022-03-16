@@ -106,7 +106,7 @@ export default {
 
   //SEO settings
   sitemap: {
-    hostname: "https://www.greenlionsgardening.com",
+    hostname: "https://greenlionsgardening.netlify.app/",
     gzip: true,
     exclude: ["/secret", "/admin/**", "/edit"]
   },
@@ -116,7 +116,7 @@ export default {
     UserAgent: "*",
     Allow: "/",
     // Disallow: "/",
-    Sitemap: 'https://www.greenlionsgardening.com/sitemap.xml'
+    Sitemap: 'https://greenlionsgardening.netlify.app/'
   },
 
   //FOR MOBILE FRONTEND TESTING
