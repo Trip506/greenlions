@@ -8,7 +8,7 @@
 			]"
 		></HeaderImage>
 
-		<Items :props="[data, '/services/']"></Items>
+		<Items :props="[data, '/clients/']"></Items>
 
 		<Services></Services>
 		<Clients />

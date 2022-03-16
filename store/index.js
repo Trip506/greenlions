@@ -55,6 +55,7 @@ export const actions = {
         let collection3 = "clients";
         let contact = "contact"
 
+        //Services
         let request = await axios.post(
             state.webRoot +
             "/api/collections/get/" +
@@ -64,7 +65,7 @@ export const actions = {
 
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
-
+        // Locations
         let request1 = await axios.post(
             state.webRoot +
             "/api/collections/get/" +
@@ -75,6 +76,7 @@ export const actions = {
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
 
+        //blog
         let request2 = await axios.post(
             state.webRoot +
             "/api/collections/get/" +
@@ -84,6 +86,8 @@ export const actions = {
 
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
+
+        //clients
         let request3 = await axios.post(
             state.webRoot +
             "/api/collections/get/" +
@@ -93,6 +97,8 @@ export const actions = {
 
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
+
+        //contact
         let request4 = await axios.post(
             state.webRoot +
             "/api/singletons/get/" +
