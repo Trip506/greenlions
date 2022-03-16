@@ -50,6 +50,8 @@ export default {
       { src: "/formstyler/jquery.formstyler.js", body: true, type: 'text/javascript', },
       { src: "/formstyler/jquery.formstyler.min.js", body: true, type: 'text/javascript', },
       { src: "/datepicker/jquery.datetimepicker.full.js", body: true, type: 'text/javascript', },
+      { src: "/mbr-testimonials-slider/mbr-testimonials-slider.js", body: true, type: 'text/javascript' },
+      { src: "/bootstrapcarouselswipe/bootstrap-carousel-swipe.js", body: true, type: 'text/javascript' },
 
 
       // { src: "/gallery/script.js", body: true, type: 'text/javascript', },

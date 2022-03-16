@@ -36,9 +36,10 @@
 							The efforts of the day
 						</h3>
 						<div class="mbr-section-text mbr-black">
-							<p class="mbr-text align-left mbr-fonts-style display-7">
-								{{ data.article_main_text }}
-							</p>
+							<p
+								class="mbr-text align-left mbr-fonts-style display-7"
+								v-html="data.article_main_text"
+							></p>
 						</div>
 					</div>
 				</div>
