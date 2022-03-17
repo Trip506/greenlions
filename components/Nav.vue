@@ -72,14 +72,13 @@
 								>Services</a
 							>
 							<div class="dropdown-menu">
-								<NuxtLink
-									no-prefetch
-									:to="'/services/' + item.slug"
+								<a
+									:href="'/services/' + item.slug"
 									v-for="(item, index) in $store.state.staticData[0][0]"
 									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
 									aria-expanded="false"
-									>{{ item.name }}</NuxtLink
+									>{{ item.name }}</a
 								>
 							</div>
 						</li>
@@ -105,14 +104,13 @@
 								>Clients</a
 							>
 							<div class="dropdown-menu">
-								<NuxtLink
-									no-prefetch
-									:to="'/clients/' + item.slug"
+								<a
+									:href="'/clients/' + item.slug"
 									v-for="(item, index) in $store.state.staticData[3][0]"
 									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
 									aria-expanded="false"
-									>{{ item.name }}</NuxtLink
+									>{{ item.name }}</a
 								>
 							</div>
 						</li>
@@ -139,14 +137,13 @@
 							>
 
 							<div class="dropdown-menu">
-								<NuxtLink
-									no-prefetch
-									:to="'/area-served/' + item.slug"
+								<a
+									:href="'/area-served/' + item.slug"
 									v-for="(item, index) in $store.state.staticData[1][0]"
 									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
 									aria-expanded="false"
-									>{{ item.name }}</NuxtLink
+									>{{ item.name }}</a
 								>
 							</div>
 						</li>
@@ -166,9 +163,9 @@
 							>
 						</li>
 						<li class="nav-item">
-							<nuxt-link
+							<a
 								class="nav-link link text-warning text-primary display-7"
-								to="/contact"
+								href="/contact"
 								><span
 									class="
 										mobi-mbri mobi-mbri-phone
@@ -176,7 +173,7 @@
 									"
 									style="font-size: 20px"
 								></span
-								>Contact</nuxt-link
+								>Contact</a
 							>
 						</li>
 					</ul>

@@ -74,9 +74,7 @@
 												display-4
 											"
 										>
-											<nuxt-link :to="'/portfolio/' + item.slug"
-												>Read More ></nuxt-link
-											>
+											<a :href="'/portfolio/' + item.slug">Read More ></a>
 										</h4>
 									</div>
 								</div>

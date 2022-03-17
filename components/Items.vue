@@ -41,8 +41,8 @@
 												display-7
 											"
 										>
-											<nuxt-link :to="props[1] + item.slug" class="text-primary"
-												>View More</nuxt-link
+											<a :href="props[1] + item.slug" class="text-primary"
+												>View More</a
 											>
 										</h4>
 									</div>

@@ -21,7 +21,7 @@
 						:key="index"
 						class="card align-center col-12 col-md-6 col-lg-4"
 					>
-						<nuxt-link class="text-primary" :to="'/clients/' + item.slug">
+						<a class="text-primary" :href="'/clients/' + item.slug">
 							<img
 								height="50"
 								:src="$store.state.assetRoot + item.icon.path"
@@ -47,7 +47,7 @@
 									</div>
 								</div>
 							</div>
-						</nuxt-link>
+						</a>
 					</div>
 				</div>
 			</div>
