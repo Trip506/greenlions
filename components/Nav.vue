@@ -72,13 +72,13 @@
 								>Services</a
 							>
 							<div class="dropdown-menu">
-								<NuxtLink
-									:to="'/services/' + item.slug"
+								<a
+									:href="'/services/' + item.slug"
 									v-for="(item, index) in $store.state.staticData[0][0]"
 									:key="index"
 									class="text-warning text-primary dropdown-item display-7"
 									aria-expanded="false"
-									>{{ item.name }}</NuxtLink
+									>{{ item.name }}</a
 								>
 							</div>
 						</li>
