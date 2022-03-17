@@ -54,7 +54,9 @@
 </template>
 
 <script>
+import { Mixin } from "~/mixins/head-subpage.js";
 export default {
+	mixins: [Mixin],
 	middleware: "portfolio",
 	components: {
 		Portfolio: () => import("@/components/Portfolio"),

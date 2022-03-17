@@ -95,7 +95,8 @@ export default {
   ],
 
   build: {
-    standalone: true,
+    // standalone: true,
+    extractCSS: true,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

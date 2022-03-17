@@ -74,7 +74,9 @@
 </template>
 
 <script>
+import { Mixin } from "~/mixins/head-subpage.js";
 export default {
+	mixins: [Mixin],
 	data() {
 		return {
 			data: this.$store.state.pageData[0],
