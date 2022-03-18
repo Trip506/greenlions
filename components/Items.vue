@@ -7,7 +7,7 @@
 		>
 			<div class="container">
 				<div class="row">
-					<div v-for="(item, index) in props[0]" :key="index" class="card align-center col-12 col-md-6 md-pb col-lg-4">
+					<div v-for="(item, index) in props[0]" v-if="index < props[2] " :key="index" class="card align-center col-12 col-md-6 md-pb col-lg-4">
 						
 						<div class="panel-item">
 							<div class="card-block">

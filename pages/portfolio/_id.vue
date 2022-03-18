@@ -41,15 +41,16 @@
 								v-html="data.article_main_text"
 							></p>
 						</div>
+						<Carousel :props="data.article_gallery"></Carousel>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<Items :props="[entries, '/portfolio/']"></Items>
+		<Contact></Contact>
 		<Services> </Services>
 		<Clients></Clients>
-		<Contact></Contact>
 	</div>
 </template>
 

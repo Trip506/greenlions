@@ -471,7 +471,7 @@
 			</div>
 		</section>
 
-		<Items :props="[blog, '/portfolio/']"></Items>
+		<Items :props="[blog, '/portfolio/', 3]"></Items>
 
 		<Contact></Contact>
 		<ContactForm></ContactForm>

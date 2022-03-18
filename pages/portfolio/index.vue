@@ -8,7 +8,7 @@
 			]"
 		></HeaderImage>
 
-		<Items :props="[entries, '/portfolio/']"></Items>
+		<Items :props="[entries, '/portfolio/', 99]"></Items>
 
 		<Clients></Clients>
 		<Services></Services>

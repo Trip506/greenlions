@@ -63,6 +63,7 @@
 							class="text2 mbr-fonts-style display-7"
 							v-html="data.article_main_text"
 						></p>
+						<Carousel :props="data.article_gallery"></Carousel>
 					</div>
 				</div>
 			</div>

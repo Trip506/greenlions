@@ -63,13 +63,15 @@
 							class="text2 mbr-fonts-style display-7"
 							v-html="data.article_main_text"
 						></p>
+
+						<Carousel :props="data.article_gallery"></Carousel>
 					</div>
 				</div>
 			</div>
 		</section>
+		<Contact />
 		<Services />
 		<Clients />
-		<Contact />
 	</div>
 </template>
 
@@ -83,6 +85,7 @@ export default {
 		};
 	},
 	components: {
+		Carousel: () => import("@/components/Carousel"),
 		Contact: () => import("@/components/Contact"),
 		Services: () => import("@/components/Services"),
 		Clients: () => import("@/components/Clients"),
