@@ -301,9 +301,11 @@
 											data.gallery1.image1._id +
 											'&w=600&h=400&o=true'
 										"
-										alt="Leo drilling a hole in St.Ives"
 									/>
 								</div>
+								<p class="mbr-text mbr-fonts-style display-6">
+									{{ data.gallery1.text1 }}
+								</p>
 								<div class="text-wrap"></div>
 							</div>
 						</div>
@@ -326,6 +328,9 @@
 									/>
 								</div>
 								<div class="text-wrap"></div>
+								<p class="mbr-text mbr-fonts-style display-6">
+									{{ data.gallery1.text2 }}
+								</p>
 							</div>
 						</div>
 					</div>
@@ -343,9 +348,11 @@
 											data.gallery1.image3._id +
 											'&w=600&h=400&o=true'
 										"
-										alt="Sam with leaf blower in Lelant"
 									/>
 								</div>
+								<p class="mbr-text mbr-fonts-style display-6">
+									{{ data.gallery1.text3 }}
+								</p>
 								<div class="text-wrap"></div>
 							</div>
 						</div>

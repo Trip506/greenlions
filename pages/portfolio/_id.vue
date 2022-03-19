@@ -4,53 +4,40 @@
 			:props="[data.header_image.path, data.name, data.header_text]"
 		></HeaderImage>
 
-		<section class="content1 woodm4_content1 cid-sXxeMVndvY" id="">
-			<div class="container" style="padding-top: 20px">
+		<section
+			class="content2 woodm4_content2 cid-sVVcLCIXvi pt-5 pb-5"
+			id="content02-7h"
+		>
+			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 md-pb col-sm-4 col-xs-12">
-						<img
-							style="width: 100%; object-fit: cover"
-							:src="
-								$store.state.webRoot +
-								'/api/cockpit/image?token=' +
-								$store.state.tokens.image +
-								'&src=' +
-								data.article_image._id +
-								'&w=600&h=400&o=true'
-							"
-							alt=""
-						/>
+					<div class="col-lg-6 md-pb">
+						<Carousel :props="data.article_gallery"></Carousel>
 					</div>
 
-					<div class="col-lg-6 col-sm-8">
-						<h3
+					<div class="col-lg-6">
+						<h1
 							class="
-								mbr-section-subtitle mbr-bold
+								mbr-section-title
 								align-left
-								mbr-black mbr-light
-								pb-3
-								mbr-fonts-style
+								mbr-bold mbr-black mbr-fonts-style
 								display-2
 							"
 						>
-							The efforts of the day
-						</h3>
-						<div class="mbr-section-text mbr-black">
-							<p
-								class="mbr-text align-left mbr-fonts-style display-7"
-								v-html="data.article_main_text"
-							></p>
-						</div>
-						<Carousel :props="data.article_gallery"></Carousel>
+							{{ data.article_title }}
+						</h1>
+
+						<p
+							class="text2 mbr-fonts-style display-7"
+							v-html="data.article_main_text"
+						></p>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<Items :props="[entries, '/portfolio/']"></Items>
-		<Contact></Contact>
-		<Services> </Services>
-		<Clients></Clients>
+		<Items :props="[display, '/portfolio/', 99, 'More stories']"></Items>
+		<Services />
+		<Clients />
+		<Contact />
 	</div>
 </template>
 
@@ -58,20 +45,20 @@
 import { Mixin } from "~/mixins/head-subpage.js";
 export default {
 	mixins: [Mixin],
-	middleware: "portfolio",
-	components: {
-		Portfolio: () => import("@/components/Portfolio"),
-		HeaderImage: () => import("@/components/HeaderImage"),
-		Clients: () => import("@/components/Clients"),
-		Services: () => import("@/components/Services"),
-		Contact: () => import("@/components/Contact"),
-	},
-
 	data() {
 		return {
 			data: this.$store.state.pageData[0],
-			entries: this.$store.state.pageData[1],
+			display: this.$store.state.pageData[1],
 		};
 	},
+	components: {
+		Contact: () => import("@/components/Contact"),
+		Services: () => import("@/components/Services"),
+		Clients: () => import("@/components/Clients"),
+		HeaderImage: () => import("@/components/HeaderImage"),
+		Items: () => import("@/components/Items"),
+	},
+
+	middleware: "portfolio",
 };
 </script>

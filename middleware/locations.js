@@ -13,9 +13,20 @@ export default async function ({ store, $axios, route }) {
 
                 { filter: { slug: route.params.id } }
             );
+            //Get all for display 
+            let request2 = await $axios.post(
+                store.state.webRoot +
+                "/api/collections/get/" +
+                collection +
+                "?token=" +
+                store.state.tokens.collections,
+                {
+                    fields: { header_text: 1, header_image: 1, name: 1, slug: 1 }, sort: { _created: -1 },
+                }
+            );
 
 
-            return store.commit("setPageData", [request1.data.entries[0]])
+            return store.commit("setPageData", [request1.data.entries[0], request2.data.entries])
         }
 
 
@@ -37,7 +48,7 @@ export default async function ({ store, $axios, route }) {
                     store.state.tokens.collections,
 
                     {
-                        fields: { name: 1, header_image: 1, header_text: 1, slug: 1 }
+                        fields: { name: 1, header_image: 1, header_text: 1, slug: 1 }, sort: { _created: -1 },
                     }
                 )
                 .then(res => {

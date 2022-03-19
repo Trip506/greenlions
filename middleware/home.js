@@ -20,6 +20,7 @@ export default async function ({ store, $axios, route }) {
             blog +
             "?token=" +
             store.state.tokens.collections,
+            { sort: { _created: -1 }, }
 
 
         );

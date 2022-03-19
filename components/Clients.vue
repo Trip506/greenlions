@@ -22,11 +22,7 @@
 						class="card align-center col-12 col-md-6 col-lg-4"
 					>
 						<a class="text-primary" :href="'/clients/' + item.slug">
-							<img
-								height="50"
-								:src="$store.state.assetRoot + item.icon.path"
-								alt=""
-							/>
+							<img height="50" :src="$store.state.assetRoot + item.icon.path" />
 							<div class="panel-item">
 								<div class="card-block">
 									<div class="text-wrap">

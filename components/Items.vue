@@ -6,30 +6,42 @@
 			id="features04-9s"
 		>
 			<div class="container">
+					<h2 class="
+						mbr-section-title
+						align-left
+						mbr-bold
+						pb-4
+						mbr-fonts-style
+						display-2
+					">
+					{{props[3]}}
+				</h2>
 				<div class="row">
 					<div v-for="(item, index) in props[0]" v-if="index < props[2] " :key="index" class="card align-center col-12 col-md-6 md-pb col-lg-4">
 						
 						<div class="panel-item">
 							<div class="card-block">
 								<div class="photo">
-									<img
-									:src="$store.state.webRoot+'/api/cockpit/image?token='+$store.state.tokens.image +'&src='+item.header_image._id+'&w=800&h=600&o=true'"
-										alt=""
-									/>
+									<a :href="props[1] + item.slug">
+										<img
+										:src="$store.state.webRoot+'/api/cockpit/image?token='+$store.state.tokens.image +'&src='+item.header_image._id+'&w=800&h=600&o=true'"
+											alt=""
+										/>
+									</a>
 								</div>
 								<div class="text-wrap">
-									<h2
+									<h3
 										class="
 											mbr-section-title
 											pb-2
 											align-center
 											mbr-bold mbr-black mbr-fonts-style
-											display-2
+											display-6
 										"
 									>
 										{{item.name}}
-									</h2>
-									<p class="mbr-text mbr-fonts-style display-7">
+									</h3>
+									<p class="mbr-text mbr-fonts-style display-6">
 										{{item.header_text}}
 									</p>
 									<div class="link-wrap pt-2">

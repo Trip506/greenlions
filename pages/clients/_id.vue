@@ -5,12 +5,16 @@
 		></HeaderImage>
 
 		<section
-			class="content2 woodm4_content2 cid-sVVcLCIXvi mbr-fullscreen"
+			class="content2 woodm4_content2 cid-sVVcLCIXvi pt-5 pb-5"
 			id="content02-7h"
 		>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 md-pb">
+						<Carousel :props="data.article_gallery"></Carousel>
+					</div>
+
+					<div class="col-lg-6">
 						<h1
 							class="
 								mbr-section-title
@@ -23,20 +27,6 @@
 						>
 							{{ data.article_title }}
 						</h1>
-						<img
-							:src="
-								$store.state.webRoot +
-								'/api/cockpit/image?token=' +
-								$store.state.tokens.image +
-								'&src=' +
-								data.article_image._id +
-								'&w=600&h=600&o=true'
-							"
-							alt="Leo strimming weed overgrowth by a granite wall in St.Ives Cornwall"
-						/>
-					</div>
-
-					<div class="col-lg-6">
 						<p class="text1 pb-3 align-left mbr-fonts-style display-7">
 							{{ data.article_subtext }}
 						</p>
@@ -63,13 +53,12 @@
 							class="text2 mbr-fonts-style display-7"
 							v-html="data.article_main_text"
 						></p>
-						<Carousel :props="data.article_gallery"></Carousel>
 					</div>
 				</div>
 			</div>
 		</section>
+		<Items :props="[display, '/clients/', 99, 'Clients']"></Items>
 		<Services />
-		<Clients />
 		<Contact />
 	</div>
 </template>
@@ -81,13 +70,15 @@ export default {
 	data() {
 		return {
 			data: this.$store.state.pageData[0],
+			display: this.$store.state.pageData[1],
 		};
 	},
 	components: {
 		Contact: () => import("@/components/Contact"),
 		Services: () => import("@/components/Services"),
-		Clients: () => import("@/components/Clients"),
+
 		HeaderImage: () => import("@/components/HeaderImage"),
+		Items: () => import("@/components/Items"),
 	},
 
 	middleware: "clients",
