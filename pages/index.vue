@@ -16,7 +16,6 @@
 							<img
 								height="100px"
 								:src="$store.state.assetRoot + data.icon_bar.icon1.path"
-								alt=""
 							/>
 						</div>
 						<div class="card-box">
@@ -85,17 +84,11 @@
 							{{ data.header_title }}
 						</h2>
 						<img
-							:src="
-								$store.state.webRoot +
-								'/api/cockpit/image?token=' +
-								$store.state.tokens.image +
-								'&src=' +
-								data.article_image._id +
-								'&w=400&h=400&o=true'
-							"
+							:src="$store.state.assetRoot + data.article_image.path"
 							alt="Sam posing over his fine allotment work"
 						/>
 					</div>
+					{{ data.article_image }}
 
 					<div class="col-lg-6">
 						<p class="text1 pb-3 align-left mbr-fonts-style display-5">
@@ -155,14 +148,7 @@
 
 					<div class="col-lg-6">
 						<img
-							:src="
-								$store.state.webRoot +
-								'/api/cockpit/image?token=' +
-								$store.state.tokens.image +
-								'&src=' +
-								data.service.image._id +
-								'&w=600&h=600&o=true'
-							"
+							:src="$store.state.assetRoot + data.service.image.path"
 							alt="Trimming lower branches of a tree"
 						/>
 
@@ -293,14 +279,7 @@
 							<div class="card-block">
 								<div class="photo">
 									<img
-										:src="
-											$store.state.webRoot +
-											'/api/cockpit/image?token=' +
-											$store.state.tokens.image +
-											'&src=' +
-											data.gallery1.image1._id +
-											'&w=600&h=400&o=true'
-										"
+										:src="$store.state.assetRoot + data.gallery1.image1.path"
 									/>
 								</div>
 								<p class="mbr-text mbr-fonts-style display-6">
@@ -316,14 +295,7 @@
 							<div class="card-block">
 								<div class="photo">
 									<img
-										:src="
-											$store.state.webRoot +
-											'/api/cockpit/image?token=' +
-											$store.state.tokens.image +
-											'&src=' +
-											data.gallery1.image2._id +
-											'&w=600&h=400&o=true'
-										"
+										:src="$store.state.assetRoot + data.gallery1.image2.path"
 										alt="Leo shaping a hedge in Newlyn"
 									/>
 								</div>
@@ -340,14 +312,7 @@
 							<div class="card-block">
 								<div class="photo">
 									<img
-										:src="
-											$store.state.webRoot +
-											'/api/cockpit/image?token=' +
-											$store.state.tokens.image +
-											'&src=' +
-											data.gallery1.image3._id +
-											'&w=600&h=400&o=true'
-										"
+										:src="$store.state.assetRoot + data.gallery1.image3.path"
 									/>
 								</div>
 								<p class="mbr-text mbr-fonts-style display-6">
@@ -383,14 +348,7 @@
 							<div class="card-block">
 								<div class="testimonial-photo">
 									<img
-										:src="
-											$store.state.webRoot +
-											'/api/cockpit/image?token=' +
-											$store.state.tokens.image +
-											'&src=' +
-											data.team.image1._id +
-											'&w=500&h=600&o=true'
-										"
+										:src="$store.state.assetRoot + data.team.image1.path"
 										alt="Leo posing over his fine work"
 									/>
 								</div>
@@ -431,14 +389,7 @@
 							<div class="card-block">
 								<div class="testimonial-photo">
 									<img
-										:src="
-											$store.state.webRoot +
-											'/api/cockpit/image?token=' +
-											$store.state.tokens.image +
-											'&src=' +
-											data.team.image2._id +
-											'&w=500&h=600&o=true'
-										"
+										:src="$store.state.assetRoot + data.team.image2.path"
 										alt="Sam weeding an allotment bed"
 									/>
 								</div>
