@@ -9,17 +9,24 @@
 					>
 						<!--Formbuilder Form-->
 						<form
-							action="https://mobirise.eu/"
-							method="POST"
+							name="contact"
+							action="/thanks"
+							data-netlify="true"
+							data-netlify-honeypot="bot-field"
+							data-netlify-recaptcha="true"
 							class="mbr-form form-with-styler"
-							data-form-title="Form Name"
 						>
-							<input
-								type="hidden"
-								name="email"
-								data-form-email="true"
-								value="oEAaGK6QOXzLTIrwKlhtPcQz0ATMjAcs+sC2TOmY9+bw8tpdj3qujSF2Y1cZDK1Dhf0Vpdc3/byARep6LxlG0rs/5OiHFKPAQbTTbiwIXC69QCN3pztMg1e5hG2vLUZG.hTRfoW/kF1HnVA8UDMxQmS1l/tFNNEd/e9f7i0TWL9qflI+80+rXGUcF+pr8zfIyjZvLyDpfxQ2vf+hdG8CZG+LDJ/2IC3mGS+wXTUqh81gZLmAWIA/TAm6T8RR26Inr"
-							/>
+							<input type="hidden" name="form-name" value="contact" />
+
+							<!-- Honeypot field -->
+							<p style="display: none">
+								<label id="contact-form-bot-label"> </label>
+								Fill this in if you are not alive
+								<input
+									name="bot-field"
+									aria-labelledby="contact-form-bot-label"
+								/>
+							</p>
 							<div class="form-row">
 								<div
 									hidden="hidden"
@@ -57,6 +64,7 @@
 									<div class="form-row">
 										<div class="col-lg-6 col-md-12 col-sm-12 form-group">
 											<input
+												v-model="form.firstname"
 												type="text"
 												name="nameFirst"
 												placeholder="First Name"
@@ -68,6 +76,7 @@
 										</div>
 										<div class="col-lg-6 col-md-12 col-sm-12 form-group">
 											<input
+												v-model="form.lastname"
 												type="text"
 												name="nameLast"
 												placeholder="Last Name"
@@ -85,6 +94,7 @@
 									style=""
 								>
 									<input
+										v-model="form.phone"
 										type="tel"
 										name="phone"
 										placeholder="Phone"
@@ -121,6 +131,7 @@
 									data-for="message"
 								>
 									<textarea
+										v-model="form.message"
 										name="message"
 										placeholder="Message"
 										data-form-field="message"
@@ -128,9 +139,11 @@
 										id="message-form01-o"
 									></textarea>
 								</div>
+								<div data-netlify-recaptcha="true" class="form-row"></div>
 								<div class="col-auto m-auto pt-5">
 									<button
 										type="submit"
+										ref="submit"
 										class="btn btn-primary-outline display-7"
 									>
 										SUBMIT
@@ -155,8 +168,34 @@
 export default {
 	data() {
 		return {
-			data: this.$store.state.staticData[4],
+			error: "",
+			form: {
+				firstname: "",
+				lastname: "",
+				email: "",
+				phone: "",
+				message: "",
+				data: this.$store.state.staticData[4],
+			},
 		};
+	},
+
+	methods: {
+		submitPost(e) {
+			if (
+				this.form.firstname &&
+				this.form.lastname &&
+				this.form.email &&
+				this.form.message &&
+				this.form.subject &&
+				this.form.phone
+			) {
+				return this.$refs.submit.click();
+			} else {
+				e.preventDefault();
+				this.error = "Please fill in all the form fields";
+			}
+		},
 	},
 };
 </script>
