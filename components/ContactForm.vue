@@ -172,7 +172,7 @@ export default {
 			form: {
 				firstname: "",
 				lastname: "",
-				email: "",
+
 				phone: "",
 				message: "",
 				data: this.$store.state.staticData[4],
@@ -185,9 +185,8 @@ export default {
 			if (
 				this.form.firstname &&
 				this.form.lastname &&
-				this.form.email &&
+				// this.form.email &&
 				this.form.message &&
-				this.form.subject &&
 				this.form.phone
 			) {
 				return this.$refs.submit.click();
