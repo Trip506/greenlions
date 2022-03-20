@@ -128,7 +128,7 @@
 				<div class="row">
 					<div class="col-lg-6 md-pb m-auto">
 						<div class="content">
-							<h1
+							<h2
 								class="
 									mbr-section-title
 									align-left
@@ -139,7 +139,7 @@
 								"
 							>
 								{{ data.service.title }}
-							</h1>
+							</h2>
 							<h2
 								class="
 									mbr-section-subtitle

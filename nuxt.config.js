@@ -53,7 +53,7 @@ export default {
 
 
       // { src: "/gallery/script.js", body: true, type: 'text/javascript', },
-      { src: "/formoid/formoid.min.js", body: true, type: 'text/javascript', },
+      // { src: "/formoid/formoid.min.js", body: true, type: 'text/javascript', },
     ],
   },
 
