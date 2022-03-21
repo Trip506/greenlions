@@ -53,7 +53,7 @@
 												display-7
 											"
 										>
-											<a :href="props[1] + item.slug" class="text-primary"
+											<a rel="canonical" :href="props[1] + item.slug" class="text-primary"
 												>View More</a
 											>
 										</h4>

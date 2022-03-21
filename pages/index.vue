@@ -5,68 +5,8 @@
 		></HeaderImage>
 
 		<!-- Icon bar -->
-		<section
-			class="features3 woodm4_features3 cid-sTn5782uJc"
-			id="features03-k"
-		>
-			<div class="container">
-				<div class="media-container-row">
-					<div class="card p-3 col-12 col-md-6 col-lg-4">
-						<div class="card-img pb-3">
-							<img
-								height="100px"
-								:src="$store.state.assetRoot + data.icon_bar.icon1.path"
-							/>
-						</div>
-						<div class="card-box">
-							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
-								{{ data.icon_bar.title1 }}
-							</h4>
-							<p class="mbr-text mbr-fonts-style display-7">
-								{{ data.icon_bar.text1 }}
-							</p>
-						</div>
-					</div>
 
-					<div class="card p-3 col-12 col-md-6 col-lg-4">
-						<div class="card-img pb-3">
-							<img
-								height="100px"
-								:src="$store.state.assetRoot + data.icon_bar.icon2.path"
-								alt=""
-							/>
-						</div>
-						<div class="card-box">
-							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
-								{{ data.icon_bar.title2 }}
-							</h4>
-							<p class="mbr-text mbr-fonts-style display-7">
-								{{ data.icon_bar.text2 }}
-							</p>
-						</div>
-					</div>
-
-					<div class="card p-3 col-12 col-md-6 col-lg-4">
-						<div class="card-img pb-3">
-							<img
-								height="100px"
-								:src="$store.state.assetRoot + data.icon_bar.icon3.path"
-								alt=""
-							/>
-						</div>
-						<div class="card-box">
-							<h4 class="card-title py-3 mbr-bold mbr-fonts-style display-2">
-								{{ data.icon_bar.title3 }}
-							</h4>
-							<p class="mbr-text mbr-fonts-style display-7">
-								{{ data.icon_bar.text2 }}
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
+		<!-- Main About with h1 -->
 		<section class="content2 cid-rArXFNF7KR" id="content02-7">
 			<div class="container">
 				<div class="row">
@@ -88,7 +28,6 @@
 							alt="Sam posing over his fine allotment work"
 						/>
 					</div>
-					{{ data.article_image }}
 
 					<div class="col-lg-6">
 						<p class="text1 pb-3 align-left mbr-fonts-style display-5">
@@ -113,218 +52,11 @@
 			</div>
 		</section>
 
-		<section
-			class="accordion2 woodm4_accordion2 cid-sTnbnpBasn"
-			id="accordion02-l"
-		>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 md-pb m-auto">
-						<div class="content">
-							<h2
-								class="
-									mbr-section-title
-									align-left
-									mbr-bold mbr-white
-									pb-4
-									mbr-fonts-style
-									display-2
-								"
-							>
-								{{ data.service.title }}
-							</h2>
-							<h2
-								class="
-									mbr-section-subtitle
-									align-left
-									mbr-white mbr-light mbr-fonts-style
-									display-7
-								"
-							>
-								{{ data.service.text }}
-							</h2>
-						</div>
-					</div>
+		<IconBar :props="data.icon_bar"></IconBar>
 
-					<div class="col-lg-6">
-						<img
-							:src="$store.state.assetRoot + data.service.image.path"
-							alt="Trimming lower branches of a tree"
-						/>
+		<ServiceDropdown :props="data.service"></ServiceDropdown>
 
-						<div
-							id="bootstrap-accordion_14"
-							class="panel-group accordionStyles accordion"
-							role="tablist"
-							aria-multiselectable="true"
-						>
-							<div class="card">
-								<div class="card-header" role="tab" id="headingOne">
-									<a
-										role="button"
-										class="panel-title collapsed text-black"
-										data-toggle="collapse"
-										data-core=""
-										href="#collapse1_14"
-										aria-expanded="false"
-										aria-controls="collapse1"
-									>
-										<h4 class="mbr-fonts-style display-5">
-											{{ data.service.dropdown_title1 }}&nbsp;&nbsp;<span
-												class="sign mbr-iconfont mbri-arrow-down inactive"
-												><br
-											/></span>
-										</h4>
-									</a>
-								</div>
-								<div
-									id="collapse1_14"
-									class="panel-collapse noScroll collapse"
-									role="tabpanel"
-									aria-labelledby="headingOne"
-									data-parent="#bootstrap-accordion_14"
-								>
-									<div class="panel-body p-4">
-										<p class="mbr-fonts-style panel-text display-7">
-											{{ data.service.dropdown_text1 }}
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="card-header" role="tab" id="headingTwo">
-									<a
-										role="button"
-										class="collapsed panel-title text-black"
-										data-toggle="collapse"
-										data-core=""
-										href="#collapse2_14"
-										aria-expanded="false"
-										aria-controls="collapse2"
-									>
-										<h4 class="mbr-fonts-style display-5">
-											{{ data.service.dropdown_title2 }}&nbsp;<span
-												class="sign mbr-iconfont mbri-arrow-down inactive"
-												><br
-											/></span>
-										</h4>
-									</a>
-								</div>
-								<div
-									id="collapse2_14"
-									class="panel-collapse noScroll collapse"
-									role="tabpanel"
-									aria-labelledby="headingTwo"
-									data-parent="#bootstrap-accordion_14"
-								>
-									<div class="panel-body p-4">
-										<p class="mbr-fonts-style panel-text display-7">
-											{{ data.service.dropdown_text2 }}
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="card-header" role="tab" id="headingThree">
-									<a
-										role="button"
-										class="collapsed text-black panel-title"
-										data-toggle="collapse"
-										data-core=""
-										href="#collapse3_14"
-										aria-expanded="false"
-										aria-controls="collapse3"
-									>
-										<h4 class="mbr-fonts-style display-5">
-											{{ data.service.dropdown_title3
-											}}<span class="sign mbr-iconfont mbri-arrow-down inactive"
-												><br
-											/></span>
-										</h4>
-									</a>
-								</div>
-								<div
-									id="collapse3_14"
-									class="panel-collapse noScroll collapse"
-									role="tabpanel"
-									aria-labelledby="headingThree"
-									data-parent="#bootstrap-accordion_14"
-								>
-									<div class="panel-body p-4">
-										<p class="mbr-fonts-style panel-text display-7">
-											{{ data.service.dropdown_text3 }}
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Gallery -->
-		<section
-			class="features2 woodm4_features2 cid-sTPxC1s93i"
-			id="features02-m"
-		>
-			<div class="container">
-				<div class="row"></div>
-			</div>
-
-			<div class="container">
-				<div class="row">
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										:src="$store.state.assetRoot + data.gallery1.image1.path"
-									/>
-								</div>
-								<p class="mbr-text mbr-fonts-style display-6">
-									{{ data.gallery1.text1 }}
-								</p>
-								<div class="text-wrap"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										:src="$store.state.assetRoot + data.gallery1.image2.path"
-										alt="Leo shaping a hedge in Newlyn"
-									/>
-								</div>
-								<div class="text-wrap"></div>
-								<p class="mbr-text mbr-fonts-style display-6">
-									{{ data.gallery1.text2 }}
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="card align-center col-12 col-md-6 col-lg-4">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="photo">
-									<img
-										:src="$store.state.assetRoot + data.gallery1.image3.path"
-									/>
-								</div>
-								<p class="mbr-text mbr-fonts-style display-6">
-									{{ data.gallery1.text3 }}
-								</p>
-								<div class="text-wrap"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<GalleryHomepage :props="data.gallery1"></GalleryHomepage>
 		<IconSlogans></IconSlogans>
 		<section class="team1 woodm4_team1 cid-sThGNiePHt" id="team01-j">
 			<div class="container">
@@ -474,6 +206,9 @@ export default {
 		Services: () => import("@/components/Services"),
 		Clients: () => import("@/components/Clients"),
 		BackgroundImage: () => import("@/components/BackgroundImage"),
+		IconBar: () => import("@/components/IconBar"),
+		ServiceDropdown: () => import("@/components/ServiceDropdown"),
+		GalleryHomepage: () => import("@/components/GalleryHomepage"),
 	},
 
 	jsonld() {

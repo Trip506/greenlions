@@ -52,14 +52,17 @@
 						><br />info@greenlionsgardening.com<br /><br /><strong
 							>Social Media:</strong
 						><br /><a
+							target="_blank"
 							href="https://www.facebook.com/The-Green-Lions-Gardening-Services-in-West-Penwith-112466311333432"
 							class="text-primary"
 							>Facebook</a
 						><br /><a
 							href="https://nextdoor.co.uk/pages/green-lions-penzance-gardening-services/"
 							class="text-primary"
+							target="_blank"
 							>Nextdoor</a
 						><br /><a
+							target="_blank"
 							href="https://nextdoor.co.uk/pages/green-lions-penzance-gardening-services/"
 							class="text-primary"
 							><br /></a

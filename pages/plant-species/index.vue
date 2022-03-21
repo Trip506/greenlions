@@ -3,8 +3,8 @@
 		<HeaderImage
 			:props="[
 				entries[0].header_image.path,
-				'Portfolio of Gardening',
-				'See our recent accomplishments on the job',
+				'Common Cornish Plant Index',
+				'Explore our library of recognisable plants seen in local gardens, parks and wild areas',
 			]"
 		></HeaderImage>
 

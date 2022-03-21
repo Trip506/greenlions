@@ -139,7 +139,7 @@
 										id="message-form01-o"
 									></textarea>
 								</div>
-								<div data-netlify-recaptcha="true" class="form-row"></div>
+
 								<div class="col-auto m-auto pt-5">
 									<button
 										type="submit"
@@ -148,6 +148,11 @@
 									>
 										SUBMIT
 									</button>
+									<br />
+									<div
+										data-netlify-recaptcha="true"
+										class="form-row mt-5"
+									></div>
 								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12">
 									<h4 class="mbr-fonts-style align-center pt-4 display-4">

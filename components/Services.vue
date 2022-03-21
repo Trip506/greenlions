@@ -21,7 +21,11 @@
 						:key="index"
 						class="card align-center col-12 col-md-6 col-lg-4"
 					>
-						<a class="text-primary" :href="'/services/' + item.slug">
+						<a
+							rel="canonical"
+							class="text-primary"
+							:href="'/services/' + item.slug"
+						>
 							<img
 								height="50"
 								:src="$store.state.assetRoot + item.icon.path"
