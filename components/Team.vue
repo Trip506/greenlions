@@ -8,7 +8,7 @@
 								<div class="testimonial-photo">
 									<img
 										:src="$store.state.assetRoot + props.image1.path"
-										alt="Leo posing over his fine work"
+										:alt="props.image1.description"
 									/>
 								</div>
 								<div class="card-footer">
@@ -49,7 +49,7 @@
 								<div class="testimonial-photo">
 									<img
 										:src="$store.state.assetRoot + props.image2.path"
-										alt="Sam weeding an allotment bed"
+											:alt="props.image1.description"
 									/>
 								</div>
 								<div class="card-footer">

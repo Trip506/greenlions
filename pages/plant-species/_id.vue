@@ -51,7 +51,7 @@
 				</div>
 			</div>
 		</section>
-		<Items :props="[display, '/plant-species/', 99, 'More plants']"></Items>
+		<Plants :props="[display, '/plant-species/', 99, 'More plants']"></Plants>
 		<Services />
 		<Clients />
 		<Contact />
@@ -73,7 +73,7 @@ export default {
 		Services: () => import("@/components/Services"),
 		Clients: () => import("@/components/Clients"),
 		HeaderImage: () => import("@/components/HeaderImage"),
-		Items: () => import("@/components/Items"),
+		Plants: () => import("@/components/Plants"),
 	},
 
 	middleware: "plant-species",

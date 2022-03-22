@@ -36,14 +36,7 @@
 									<div class="container">
 										<img
 											style="width: 100%; margin-y: 20px"
-											:src="
-												$store.state.webRoot +
-												'/api/cockpit/image?token=' +
-												$store.state.tokens.image +
-												'&src=' +
-												item.meta_image._id +
-												'&w=500&h=300&o=true'
-											"
+											:src="$store.state.assetRoot + item.meta_image.path"
 											alt=""
 										/>
 									</div>

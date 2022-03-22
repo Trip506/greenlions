@@ -25,7 +25,7 @@
 						</h2>
 						<img
 							:src="$store.state.assetRoot + data.article_image.path"
-							alt="Sam posing over his fine allotment work"
+							:alt="data.article_image.description"
 						/>
 					</div>
 
@@ -73,92 +73,7 @@
 			</div>
 			<!-- Team -->
 
-			<div class="container pt-5">
-				<div class="row">
-					<div class="mbr-testimonial align-center col-12 col-md-6 md-pb">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="testimonial-photo">
-									<img
-										:src="$store.state.assetRoot + data.team.image1.path"
-										alt="Leo posing over his fine work"
-									/>
-								</div>
-								<div class="card-footer">
-									<h3
-										class="
-											mbr-author-name
-											pb-4
-											mbr-black mbr-bold mbr-fonts-style
-											display-2
-										"
-									>
-										{{ data.team.name1 }}&nbsp;
-									</h3>
-									<h4
-										class="
-											mbr-author-desc
-											pb-1
-											mbr-black mbr-bold mbr-light mbr-fonts-style
-											display-7
-										"
-									>
-										{{ data.team.title1 }}
-									</h4>
-									<h4 class="phone pb-1 mbr-black mbr-fonts-style display-7">
-										Call<strong> {{ data.team.number1 }}</strong>
-									</h4>
-								</div>
-								<p class="mbr-text mbr-fonts-style display-4">
-									{{ data.team.text1 }}
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="mbr-testimonial align-center col-12 col-md-6 md-pb">
-						<div class="panel-item">
-							<div class="card-block">
-								<div class="testimonial-photo">
-									<img
-										:src="$store.state.assetRoot + data.team.image2.path"
-										alt="Sam weeding an allotment bed"
-									/>
-								</div>
-								<div class="card-footer">
-									<h3
-										class="
-											mbr-author-name
-											pb-4
-											mbr-black mbr-bold mbr-fonts-style
-											display-2
-										"
-									>
-										{{ data.team.name2 }}
-									</h3>
-									<h4
-										class="
-											mbr-author-desc
-											pb-1
-											mbr-black mbr-bold mbr-light mbr-fonts-style
-											display-7
-										"
-									>
-										{{ data.team.title2 }}
-									</h4>
-									<h4 class="phone pb-1 mbr-black mbr-fonts-style display-7">
-										Call <strong>{{ data.team.number2 }}</strong
-										>&nbsp;
-									</h4>
-								</div>
-								<p class="mbr-text mbr-fonts-style display-4">
-									{{ data.team.text2 }}
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<Team :props="data.team"></Team>
 		</section>
 
 		<Items :props="[blog, '/portfolio/', 3]"></Items>
@@ -209,7 +124,12 @@ export default {
 		IconBar: () => import("@/components/IconBar"),
 		ServiceDropdown: () => import("@/components/ServiceDropdown"),
 		GalleryHomepage: () => import("@/components/GalleryHomepage"),
+		Team: () => import("@/components/Team"),
 	},
+
+	// mounted() {
+	// 	this.$test.ping();
+	// },
 
 	jsonld() {
 		return {

@@ -26,7 +26,11 @@
 							class="text-primary"
 							:href="'/clients/' + item.slug"
 						>
-							<img height="50" :src="$store.state.assetRoot + item.icon.path" />
+							<img
+								height="50"
+								:src="$store.state.assetRoot + item.icon.path"
+								alt="icon"
+							/>
 							<div class="panel-item">
 								<div class="card-block">
 									<div class="text-wrap">

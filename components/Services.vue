@@ -29,7 +29,7 @@
 							<img
 								height="50"
 								:src="$store.state.assetRoot + item.icon.path"
-								alt=""
+								alt="icon"
 							/>
 							<div class="panel-item">
 								<div class="card-block">

@@ -10,6 +10,7 @@
 						<div class="card-img pb-3">
 							<img
 								height="100px"
+								alt="icon"
 								:src="$store.state.assetRoot + props.icon1.path"
 							/>
 						</div>
@@ -28,7 +29,7 @@
 							<img
 								height="100px"
 								:src="$store.state.assetRoot + props.icon2.path"
-								alt=""
+								alt="icon"
 							/>
 						</div>
 						<div class="card-box">
@@ -46,7 +47,7 @@
 							<img
 								height="100px"
 								:src="$store.state.assetRoot + props.icon3.path"
-								alt=""
+								alt="icon"
 							/>
 						</div>
 						<div class="card-box">

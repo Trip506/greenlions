@@ -22,7 +22,7 @@ export default async function ({ store, $axios, route }) {
                 "?token=" +
                 store.state.tokens.collections,
                 {
-                    fields: { header_text: 1, header_image: 1, name: 1, slug: 1 }, sort: { _created: -1 },
+                    fields: { header_text: 1, common_name: 1, header_image: 1, name: 1, slug: 1 }, sort: { _created: -1 },
                 }
             );
 

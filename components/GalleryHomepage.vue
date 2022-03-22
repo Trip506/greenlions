@@ -17,6 +17,7 @@
 								<div class="photo">
 									<img
 										:src="$store.state.assetRoot + props.image1.path"
+											:alt="props.image1.description"
 									/>
 								</div>
 								<p class="mbr-text mbr-fonts-style display-6">
@@ -34,6 +35,7 @@
 									<img
 										:src="$store.state.assetRoot + props.image2.path"
 										alt="Leo shaping a hedge in Newlyn"
+										:alt="props.image2.description"
 									/>
 								</div>
 								<div class="text-wrap"></div>
@@ -50,6 +52,7 @@
 								<div class="photo">
 									<img
 										:src="$store.state.assetRoot + props.image3.path"
+										:alt="props.image2.description"
 									/>
 								</div>
 								<p class="mbr-text mbr-fonts-style display-6">

@@ -36,7 +36,8 @@
 					<div class="col-lg-6">
 						<img
 							:src="$store.state.assetRoot + props.image.path"
-							alt="Trimming lower branches of a tree"
+							:alt="props.image.description"
+							
 						/>
 
 						<div

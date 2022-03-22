@@ -42,7 +42,7 @@
 										{{item.name}}
 									</h3>
 									<p class="mbr-text mbr-fonts-style display-6">
-										{{item.header_text}}
+										{{item.common_name}}
 									</p>
 									<div class="link-wrap pt-2">
 										<h4
