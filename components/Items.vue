@@ -24,7 +24,7 @@
 								<div class="photo">
 									<a :href="props[1] + item.slug">
 										<img
-										:src="$store.state.webRoot+'/api/cockpit/image?token='+$store.state.tokens.image +'&src='+item.header_image._id+'&w=800&h=600&o=true'"
+										:src="$store.state.assetRoot+item.header_image.path"
 :alt="item.header_image.description"
 										/>
 									</a>
