@@ -68,14 +68,13 @@ export default {
     "assets/bootstrap/css/bootstrap-reboot.min.css",
     "assets/dropdown/css/style.css",
     "assets/formstyler/jquery.formstyler.css",
-    // "assets/formstyler/jquery.formstyler.theme.css",
-    // "assets/datepicker/jquery.datetimepicker.min.css",
+
     "assets/socicon/css/styles.css",
     "assets/theme/css/style.css",
     "assets/mobirise/css/mbr-additional.css",
     "assets/fonts/reemi-kufi.css",
     "assets/fonts/muli.css",
-    // "assets/styles.pure.css",
+
 
   ],
 
