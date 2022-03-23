@@ -46,10 +46,10 @@ export default {
       { src: "/dropdown/js/navbar-dropdown.js", body: true, type: 'text/javascript', },
       { src: "/touchswipe/jquery.touch-swipe.min.js", body: true, type: 'text/javascript', },
 
-      { src: "/mobirise-shop/script.js", body: true, type: 'text/javascript', },
+      // { src: "/mobirise-shop/script.js", body: true, type: 'text/javascript', },
       // { src: "/formstyler/jquery.formstyler.js", body: true, type: 'text/javascript', },
       // { src: "/formstyler/jquery.formstyler.min.js", body: true, type: 'text/javascript', },
-      { src: "/datepicker/jquery.datetimepicker.full.js", body: true, type: 'text/javascript', },
+      // { src: "/datepicker/jquery.datetimepicker.full.js", body: true, type: 'text/javascript', },
 
 
       // { src: "/gallery/script.js", body: true, type: 'text/javascript', },
@@ -68,8 +68,8 @@ export default {
     "assets/bootstrap/css/bootstrap-reboot.min.css",
     "assets/dropdown/css/style.css",
     "assets/formstyler/jquery.formstyler.css",
-    "assets/formstyler/jquery.formstyler.theme.css",
-    "assets/datepicker/jquery.datetimepicker.min.css",
+    // "assets/formstyler/jquery.formstyler.theme.css",
+    // "assets/datepicker/jquery.datetimepicker.min.css",
     "assets/socicon/css/styles.css",
     "assets/theme/css/style.css",
     "assets/mobirise/css/mbr-additional.css",

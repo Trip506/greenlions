@@ -16,6 +16,7 @@
 						>
 							Contact us
 						</h2>
+						{{data}}
 						<div class="google-map">
 							<iframe
 								frameborder="0"
@@ -70,3 +71,13 @@
 		</section>
     </div>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			data: this.$store.state.staticData[3][0],
+		};
+	},
+};
+</script>

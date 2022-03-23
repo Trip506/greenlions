@@ -7,52 +7,54 @@
 			<div class="container">
 				<div class="row">
 					<div class="title col-12 pb-4 align-center">
-						<h2 class="pb-3 mbr-bold mbr-fonts-style display-2">
-							&nbsp; Clients
-						</h2>
+						<u>
+							<h2 class="pb-3 mbr-bold mbr-fonts-style display-6">Clients</h2>
+						</u>
 					</div>
 				</div>
 			</div>
 
 			<div class="container">
 				<div class="row">
-					<div
-						v-for="(item, index) in data"
-						:key="index"
-						class="card align-center col-12 col-md-6 col-lg-4"
-					>
-						<a
-							rel="canonical"
-							class="text-primary"
-							:href="'/clients/' + item.slug"
+					<client-only>
+						<div
+							v-for="(item, index) in data"
+							:key="index"
+							class="card align-center col-12 col-md-6 col-lg-4"
 						>
-							<img
-								height="50"
-								:src="$store.state.assetRoot + item.icon.path"
-								alt="icon"
-							/>
-							<div class="panel-item">
-								<div class="card-block">
-									<div class="text-wrap">
-										<div class="link-wrap pt-3">
-											<h4
-												class="
-													link
-													align-center
-													mbr-bold mbr-black mbr-fonts-style
-													display-7
-												"
-											>
-												<strong>
-													<b> {{ item.name }}</b></strong
+							<a
+								rel="canonical"
+								class="text-primary"
+								:href="'/clients/' + item.slug"
+							>
+								<img
+									height="50"
+									:src="$store.state.assetRoot + item.icon.path"
+									alt="icon"
+								/>
+								<div class="panel-item">
+									<div class="card-block">
+										<div class="text-wrap">
+											<div class="link-wrap pt-3">
+												<h4
+													class="
+														link
+														align-center
+														mbr-bold mbr-black mbr-fonts-style
+														display-7
+													"
 												>
-											</h4>
+													<strong>
+														<b> {{ item.name }}</b></strong
+													>
+												</h4>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</a>
-					</div>
+							</a>
+						</div>
+					</client-only>
 				</div>
 			</div>
 		</section>

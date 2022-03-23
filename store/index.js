@@ -110,7 +110,7 @@ export const actions = {
         );
 
 
-        await commit("setStaticData", [[request.data.entries], [request1.data.entries], [request2.data.entries], [request3.data.entries], request4.data])
+        await commit("setStaticData", [[request.data.entries], [request1.data.entries], [request2.data.entries], [request3.data.entries], [request4.data]])
 
     },
 }

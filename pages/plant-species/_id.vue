@@ -54,7 +54,7 @@
 		<Plants :props="[display, '/plant-species/', 99, 'More plants']"></Plants>
 		<Services />
 		<Clients />
-		<Contact />
+		<!-- <Contact /> -->
 	</div>
 </template>
 

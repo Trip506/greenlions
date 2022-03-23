@@ -62,7 +62,7 @@
 		</section>
 		<Items :props="[display, '/services/', 99, 'More stories']"></Items>
 		<Clients />
-		<Contact />
+		<!-- <Contact /> -->
 	</div>
 </template>
 

@@ -15,13 +15,17 @@
 							display-2
 						"
 					>
-						Contact us
+						Where we are
 					</h2>
+
 					<div class="google-map">
 						<iframe
 							frameborder="0"
 							style="border: 0"
-							src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCNveGQ9bfpKFwWzQLLftrR9hNiHwdqQG8&amp;q=Cornwall"
+							:src="
+								'https://www.google.com/maps/embed/v1/place?key=AIzaSyCNveGQ9bfpKFwWzQLLftrR9hNiHwdqQG8&amp;q=' +
+								data.town
+							"
 							allowfullscreen=""
 						></iframe>
 					</div>
@@ -37,35 +41,26 @@
 							display-5
 						"
 					>
-						We are in Penzance, Cornwall
+						{{ data.contact_title }}
 					</h3>
 
 					<p class="mbr-text pb-4 align-left mbr-fonts-style display-7">
-						We serve clients all over West Penwith.<br />From small town gardens
-						to large estates and land projects.&nbsp;<br />Give us a ring to see
-						what we can do for you!<br />
+						{{ data.contact_text }}
 					</p>
 
 					<p class="mbr-text">
-						<strong>Phone:</strong><br />Leo: 07884 255127<br />Sam: 07507
-						539688<strong><br /></strong><br /><strong>Email:</strong
-						><br />info@greenlionsgardening.com<br /><br /><strong
-							>Social Media:</strong
-						><br /><a
+						<strong>Phone:</strong><br />
+						{{ data.people.name1 }}: {{ data.people.phone1 }}<br />
+						{{ data.people.name2 }}: {{ data.people.phone2 }}
+						<strong><br /></strong><br /><strong>Email:</strong><br />{{
+							data.email
+						}}<br /><br /><strong>Social Media:</strong><br /><a
 							target="_blank"
-							href="https://www.facebook.com/The-Green-Lions-Gardening-Services-in-West-Penwith-112466311333432"
+							:href="data.facebook"
 							class="text-primary"
 							>Facebook</a
-						><br /><a
-							href="https://nextdoor.co.uk/pages/green-lions-penzance-gardening-services/"
-							class="text-primary"
-							target="_blank"
+						><br /><a :href="data.nextdoor" class="text-primary" target="_blank"
 							>Nextdoor</a
-						><br /><a
-							target="_blank"
-							href="https://nextdoor.co.uk/pages/green-lions-penzance-gardening-services/"
-							class="text-primary"
-							><br /></a
 						><br />
 					</p>
 				</div>
@@ -73,3 +68,14 @@
 		</div>
 	</section>
 </template>
+
+
+<script>
+export default {
+	data() {
+		return {
+			data: this.$store.state.staticData[4][0],
+		};
+	},
+};
+</script>

@@ -114,7 +114,7 @@
 								>
 							</div>
 						</li>
-						<li class="nav-item dropdown open">
+						<li class="nav-item dropdown">
 							<a
 								class="
 									nav-link
