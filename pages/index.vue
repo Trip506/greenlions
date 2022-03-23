@@ -79,7 +79,7 @@
 		<Items :props="[blog, '/portfolio/', 3]"></Items>
 
 		<Contact></Contact>
-		<ContactForm></ContactForm>
+		<!-- <ContactForm></ContactForm> -->
 
 		<Clients></Clients>
 		<Services></Services>
