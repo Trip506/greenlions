@@ -55,8 +55,9 @@
 		<IconBar :props="data.icon_bar"></IconBar>
 
 		<ServiceDropdown :props="data.service"></ServiceDropdown>
+		<Items :props="[blog, '/portfolio/', 3, 'Recent jobs ']"></Items>
 
-		<GalleryHomepage :props="data.gallery1"></GalleryHomepage>
+		<!-- <GalleryHomepage :props="data.gallery1"></GalleryHomepage> -->
 		<IconSlogans></IconSlogans>
 		<section class="team1 woodm4_team1 cid-sThGNiePHt" id="team01-j">
 			<div class="container">
@@ -76,9 +77,7 @@
 			<Team :props="data.team"></Team>
 		</section>
 
-		<Items :props="[blog, '/portfolio/', 3]"></Items>
-
-		<Contact></Contact>
+		<!-- <Contact></Contact> -->
 		<!-- <ContactForm></ContactForm> -->
 
 		<Clients></Clients>
