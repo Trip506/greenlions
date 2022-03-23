@@ -26,14 +26,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Reem+Kufi:400,500,600,700&display=swap'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i&display=swap'
-      }
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://fonts.googleapis.com/css?family=Reem+Kufi:400,500,600,700&display=swap'
+      // },
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i&display=swap'
+      // }
     ],
 
     script: [
@@ -73,6 +73,8 @@ export default {
     "assets/socicon/css/styles.css",
     "assets/theme/css/style.css",
     "assets/mobirise/css/mbr-additional.css",
+    "assets/fonts/reemi-kufi.css",
+    "assets/fonts/muli.css",
     // "assets/styles.pure.css",
 
   ],
