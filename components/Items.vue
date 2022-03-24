@@ -24,8 +24,8 @@
 								<div class="photo">
 									<a :href="props[1] + item.slug">
 										<img
-										:src="$store.state.assetRoot+item.header_image.path"
-:alt="item.header_image.description"
+										style="max-width:450px"
+										:src="$store.state.assetRoot+item.header_image.path" :alt="item.header_image.description"
 										/>
 									</a>
 								</div>

@@ -5,7 +5,7 @@
 		></HeaderImage>
 
 		<section
-			class="content2 woodm4_content2 cid-sVVcLCIXvi pt-5 pb-5"
+			class="content2 woodm4_content2 cid-sVVcLCIXvi pt-5"
 			id="content02-7h"
 		>
 			<div class="container">

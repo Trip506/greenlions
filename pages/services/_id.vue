@@ -20,14 +20,14 @@
 								mbr-section-title
 								align-left
 								mbr-bold mbr-black
-								pb-5
+								pb-2
 								mbr-fonts-style
 								display-2
 							"
 						>
 							{{ data.article_title }}
 						</h2>
-						<p class="text1 pb-3 align-left mbr-fonts-style display-7">
+						<p class="text1 pb-1 align-left mbr-fonts-style display-7">
 							{{ data.article_subtext }}
 						</p>
 						<u>
