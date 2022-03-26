@@ -97,7 +97,34 @@ export default {
 					hid: "description",
 					name: "description",
 					content:
-						"We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!",
+						"Green Lions Gardening | We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!",
+				},
+				{
+					hid: "fb:app_id",
+					name: "fb:app_id",
+					content:
+						"Green Lions Gardening | Professional Gardening Team in Penzance",
+				},
+				{
+					hid: "og:title",
+					name: "og:title",
+					content: "Green Lions Gardening | Home",
+				},
+				{
+					hid: "og:image",
+					name: "og:image",
+					content: this.$store.state.assetRoot + this.data.header_image.path,
+				},
+				{
+					hid: "twitter:title",
+					name: "twitter:title",
+					content: "Green Lions Gardening | Home ",
+				},
+				{
+					hid: "og:description",
+					name: "og:description",
+					content:
+						"Green Lions Gardening | We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!",
 				},
 			],
 		};
