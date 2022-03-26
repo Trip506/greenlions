@@ -131,26 +131,38 @@ export default {
 	// },
 
 	jsonld() {
-		return {
-			"@context": "http://www.schema.org",
-			"@type": "GeneralContractor",
-			name: "The Green Lions Gardening Services",
-			url: "http://www.greenlionsgardening.com",
-			sameAs: ["https:/greenlionsgardening.com"],
-			logo: "http://www.greenlionsgardening.com/assets/images/logomark-6.svg",
-			description:
-				"We are skilled and trusted gardeners with over 18 years of working horticultural experience in Cornwall . The Green Lions of Penzance are your top choice for garden, allotment and landscaping needs in West Penwith. ",
-			address: {
-				"@type": "PostalAddress",
-				addressLocality: "Penzance",
-				addressRegion: "Cornwall",
-				postalCode: "TR18 ",
-				addressCountry: "United Kingdom",
+		return [
+			{
+				"@context": "http://www.schema.org",
+				"@type": "GeneralContractor",
+				name: "The Green Lions Gardening Services",
+				url: "http://www.greenlionsgardening.com",
+				sameAs: ["https:/greenlionsgardening.com"],
+				logo: "http://www.greenlionsgardening.com/assets/images/logomark-6.svg",
+				description:
+					"We are skilled and trusted gardeners with over 18 years of working horticultural experience in Cornwall . The Green Lions of Penzance are your top choice for garden, allotment and landscaping needs in West Penwith. ",
+				address: {
+					"@type": "PostalAddress",
+					addressLocality: "Penzance",
+					addressRegion: "Cornwall",
+					postalCode: "TR18 ",
+					addressCountry: "United Kingdom",
+				},
+				openingHours:
+					"Mo 09:00-18:30 Tu 09:00-18:00 Th 09:00-19:00 Fr 09:00-19:00",
+				telephone: "07884 255127",
 			},
-			openingHours:
-				"Mo 09:00-18:30 Tu 09:00-18:00 Th 09:00-19:00 Fr 09:00-19:00",
-			telephone: "07884 255127",
-		};
+			{
+				"@context": "http://schema.org",
+				"@type": "Product",
+				name: "Regular Garden Services",
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "Product",
+				name: "Tree Care",
+			},
+		];
 	},
 	//get strapi data
 };
