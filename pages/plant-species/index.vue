@@ -17,16 +17,17 @@
 
 <script>
 export default {
-	head: {
-		title: "Portfolio | Green Lions Gardening",
-		meta: [
-			{
-				hid: "description",
-				name: "description",
-				content:
-					"We provide our gardening services to wedding venues across Cornwall. We'll transform your chosen matrimonial garden to fit any pristine and ornate wedding venue.",
-			},
-		],
+	head() {
+		return {
+			title: "Portfolio | Green Lions Gardening",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: "See our library of plant species",
+				},
+			],
+		};
 	},
 	middleware: "plant-species",
 	data() {

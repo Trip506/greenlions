@@ -89,16 +89,18 @@
 
 <script>
 export default {
-	head: {
-		title: "Home | Green Lions Gardening Services",
-		meta: [
-			{
-				hid: "description",
-				name: "description",
-				content:
-					"We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!",
-			},
-		],
+	head() {
+		return {
+			title: "Home | Green Lions Gardening Services",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content:
+						"We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!",
+				},
+			],
+		};
 	},
 	data() {
 		return {

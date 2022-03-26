@@ -18,16 +18,18 @@
 
 <script>
 export default {
-	head: {
-		title: "Services | Green Lions Gardening",
-		meta: [
-			{
-				hid: "description",
-				name: "description",
-				content:
-					"We serve a variety of clients in Penzance and around West Cornwall including: Town Houses, Holiday Properties, Commercial Properties, Manor houses and Large Estates, Wedding Venues and Allotments.",
-			},
-		],
+	head() {
+		return {
+			title: "Services | Green Lions Gardening",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content:
+						"We serve a variety of clients in Penzance and around West Cornwall including: Town Houses, Holiday Properties, Commercial Properties, Manor houses and Large Estates, Wedding Venues and Allotments.",
+				},
+			],
+		};
 	},
 	data() {
 		return {
