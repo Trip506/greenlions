@@ -3,10 +3,10 @@ import axios from "axios"
 export const state = () => ({
 
     //Cockpit root
-    assetRoot: "https://greenlionsgardening.com/cms/storage/uploads",
+    assetRoot: "https://cms-greenlionsgardening.salumiweb.com/storage/uploads",
 
     //Website
-    webRoot: "https://greenlionsgardening.com/cms",
+    webRoot: "https://cms-greenlionsgardening.salumiweb.com",
 
     //Api tokens 
     tokens: {

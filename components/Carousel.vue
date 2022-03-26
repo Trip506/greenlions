@@ -5,12 +5,12 @@
 							class="carousel slide"
 							data-ride="carousel"
 						>
-							<div class="carousel-inner">
+							<div class="carousel-inner" >
 								<div :class="'carousel-item'+ifZero(index)" v-for="(item, index) in props" :key="index">
 									<img
                                     :alt='item.meta.title'
-                                    alt="hello"
-                                    style="height:100%"
+                                   
+                                    style="height: 450px;width: 100%; object-fit: cover; "
                                     
                                 
 										:src="'https://greenlionsgardening.com'  + item.path"

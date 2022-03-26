@@ -76,7 +76,7 @@
 export default {
 	data() {
 		return {
-			data: this.$store.state.staticData[3][0],
+			data: this.$store.state.staticData[4][0],
 		};
 	},
 };
