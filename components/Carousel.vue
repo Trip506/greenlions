@@ -13,7 +13,7 @@
                                     style="height: 450px;width: 100%; object-fit: cover; "
                                     
                                 
-										:src="'https://greenlionsgardening.com'  + item.path"
+										:src="$store.state.webRoot  + item.path"
 									
 									/>
                         

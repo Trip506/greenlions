@@ -3,7 +3,7 @@ import axios from "axios"
 export const state = () => ({
 
     //Cockpit root
-    assetRoot: "https://cms-greenlionsgardening.salumiweb.com/storage/uploads",
+    assetRoot: "https://cms-greenlionsgardening.salumiweb.com/storage/uploads/",
 
     //Website
     webRoot: "https://cms-greenlionsgardening.salumiweb.com",
