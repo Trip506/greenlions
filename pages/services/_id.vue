@@ -60,7 +60,7 @@
 				</div>
 			</div>
 		</section>
-		<Items :props="[display, '/services/', 99, 'More stories']"></Items>
+		<Items :props="[display, '/services/', 99, 'All Services']"></Items>
 		<Clients />
 		<!-- <Contact /> -->
 	</div>

@@ -12,10 +12,12 @@
 					<div class="card p-3 col-12 col-md-6 col-lg-4">
 						<div class="card-box">
 							<h4 class="card-title mbr-bold mbr-fonts-style display-5">
-								Base
+								More
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								Penzance<br />TR18 4TJ
+								<u><a href="../vacancies">Recruitment </a></u>
+								<br />
+								<u><a href="../plant-species">Plant Library</a><br /></u>
 							</p>
 						</div>
 					</div>
@@ -47,8 +49,6 @@
 									class="text-primary"
 									target="_blank"
 									>Facebook</a
-								><br /><br />
-								<a href="/plant-species" class="text-primary">Plant Species</a
 								><br />
 							</p>
 						</div>

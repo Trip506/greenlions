@@ -34,7 +34,9 @@
 				</div>
 			</div>
 		</section>
-		<Items :props="[display, '/area-served/', 99]"></Items>
+		<Items
+			:props="[display, '/area-served/', 99, 'Other towns we serve']"
+		></Items>
 		<Services />
 		<Clients />
 		<Contact />
