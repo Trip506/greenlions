@@ -14,7 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "Gardening services penzance mowing strimming improvement maintenance landscaping design allotment care" },
+      { hid: 'description', name: 'description', content: "Green Lions Gardening | We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!" },
       { name: 'format-detection', content: 'telephone=no' },
 
       //Facebook og (open graph) meta data 
@@ -22,7 +22,7 @@ export default {
       { hid: 'og:title', name: 'og:title', content: "Gardening Services in West Penwith " },
       { hid: 'og:image', name: 'og:image', content: "assets/images/iphone0-1349x1012-result.jpg" },
       { hid: 'twitter:title', name: 'twitter:title', content: "Green Lions Gardening" },
-      { hid: 'og:description', name: 'og:description', content: "Gardening services penzance mowing strimming improvement maintenance landscaping design allotment care" }
+      { hid: 'og:description', name: 'og:description', content: "Green Lions Gardening | We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -110,7 +110,7 @@ export default {
 
   //SEO settings
   sitemap: {
-    hostname: "https://greenlionsgardening.netlify.app/",
+    hostname: "https://greenlionsgardening.com",
     gzip: true,
     exclude: ["/secret", "/admin/**", "/edit"]
   },
@@ -120,7 +120,7 @@ export default {
     UserAgent: "*",
     Allow: "/",
     // Disallow: "/",
-    Sitemap: 'https://greenlionsgardening.netlify.app/'
+    Sitemap: 'https://greenlionsgardening.com/sitemap.xml'
   },
 
   //FOR MOBILE FRONTEND TESTING
