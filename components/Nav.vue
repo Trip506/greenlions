@@ -150,7 +150,7 @@
 						<li class="nav-item">
 							<a
 								class="nav-link link text-warning text-primary display-7"
-								href="/portfolio"
+								href="../portfolio"
 								aria-expanded="false"
 								><span
 									class="
@@ -165,7 +165,7 @@
 						<li class="nav-item">
 							<a
 								class="nav-link link text-warning text-primary display-7"
-								href="/contact"
+								href="../contact"
 								><span
 									class="
 										mobi-mbri mobi-mbri-phone

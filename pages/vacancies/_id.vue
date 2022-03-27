@@ -10,10 +10,6 @@
 		>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 md-pb">
-						<Carousel :props="data.article_gallery"></Carousel>
-					</div>
-
 					<div class="col-lg-6">
 						<h2
 							class="
@@ -52,6 +48,13 @@
 								</li>
 							</ul>
 						</div>
+					</div>
+					<!-- Carousel -->
+					<div class="col-lg-6 md-pb pb-2 pt-2">
+						<Carousel :props="data.article_gallery"></Carousel>
+					</div>
+
+					<div class="col-lg-12 mt-3">
 						<p
 							class="text2 mbr-fonts-style display-7"
 							v-html="data.article_main_text"
@@ -63,6 +66,7 @@
 		<Items
 			:props="[display, '/vacancies/', 99, 'Current job vacancies']"
 		></Items>
+		<Services></Services>
 		<Clients />
 		<!-- <Contact /> -->
 	</div>
@@ -82,6 +86,7 @@ export default {
 		Contact: () => import("@/components/Contact"),
 		Services: () => import("@/components/Services"),
 		Clients: () => import("@/components/Clients"),
+		Services: () => import("@/components/Services"),
 		HeaderImage: () => import("@/components/HeaderImage"),
 		Items: () => import("@/components/Items"),
 	},
