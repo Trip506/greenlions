@@ -33,5 +33,7 @@
 </template>
 
 <script>
-export default {};
+export default {
+	props: ["error"],
+};
 </script>

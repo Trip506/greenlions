@@ -7,6 +7,7 @@ export const state = () => ({
 
     //Website
     webRoot: "https://cms-greenlionsgardening.salumiweb.com",
+    webSite: "https://www.greenlionsgardening.com",
 
     //Api tokens 
     tokens: {

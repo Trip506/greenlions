@@ -182,3 +182,49 @@
 		</section>
 	</div>
 </template>
+
+
+<script>
+export default {
+	jsonld() {
+		let root = this.$store.state.webSite;
+		let services = this.$store.state.staticData[0][0];
+		let arr = [];
+		let filtered = services.forEach((element) => {
+			arr.push({
+				"@type": "ListItem",
+				position: 2,
+				name: element.name,
+				item: root + "/" + element.slug,
+			});
+		});
+
+		return {
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			itemListElement: [
+				{
+					"@type": "ListItem",
+					position: 1,
+					name: "Services",
+					item: root + "/services/",
+				},
+
+				arr,
+				// {
+				// 	"@type": "ListItem",
+				// 	position: 2,
+				// 	name: "Regular Garden Services",
+				// 	item: "https://example.com/books/regular-garden-services",
+				// },
+				// {
+				// 	"@type": "ListItem",
+				// 	position: 2,
+				// 	name: "Allotment",
+				// 	item: "https://example.com/books/allotment",
+				// },
+			],
+		};
+	},
+};
+</script>
