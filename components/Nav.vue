@@ -189,6 +189,10 @@ export default {
 	jsonld() {
 		let root = this.$store.state.webSite;
 		let services = this.$store.state.staticData[0][0];
+		let clients = this.$store.state.staticData[3][0];
+		let areaserved = this.$store.state.staticData[1][0];
+		let portfolio = this.$store.state.staticData[2][0];
+
 		let arr = [
 			{
 				"@type": "ListItem",
@@ -196,8 +200,50 @@ export default {
 				name: "Services",
 				item: root + "/services/",
 			},
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Clients",
+				item: root + "/clients/",
+			},
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Portfolio",
+				item: root + "/portfolio/",
+			},
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Area Served",
+				item: root + "/area-served/",
+			},
 		];
-		let filtered = services.forEach((element) => {
+		services.forEach((element) => {
+			arr.push({
+				"@type": "ListItem",
+				position: 2,
+				name: element.name,
+				item: root + "/" + element.slug,
+			});
+		});
+		clients.forEach((element) => {
+			arr.push({
+				"@type": "ListItem",
+				position: 2,
+				name: element.name,
+				item: root + "/" + element.slug,
+			});
+		});
+		areaserved.forEach((element) => {
+			arr.push({
+				"@type": "ListItem",
+				position: 2,
+				name: element.name,
+				item: root + "/" + element.slug,
+			});
+		});
+		portfolio.forEach((element) => {
 			arr.push({
 				"@type": "ListItem",
 				position: 2,
@@ -206,6 +252,7 @@ export default {
 			});
 		});
 
+		//Return as JSONLD
 		return {
 			"@context": "https://schema.org",
 			"@type": "BreadcrumbList",
