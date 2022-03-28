@@ -189,7 +189,14 @@ export default {
 	jsonld() {
 		let root = this.$store.state.webSite;
 		let services = this.$store.state.staticData[0][0];
-		let arr = [];
+		let arr = [
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Services",
+				item: root + "/services/",
+			},
+		];
 		let filtered = services.forEach((element) => {
 			arr.push({
 				"@type": "ListItem",
@@ -202,28 +209,7 @@ export default {
 		return {
 			"@context": "https://schema.org",
 			"@type": "BreadcrumbList",
-			itemListElement: [
-				{
-					"@type": "ListItem",
-					position: 1,
-					name: "Services",
-					item: root + "/services/",
-				},
-
-				arr,
-				// {
-				// 	"@type": "ListItem",
-				// 	position: 2,
-				// 	name: "Regular Garden Services",
-				// 	item: "https://example.com/books/regular-garden-services",
-				// },
-				// {
-				// 	"@type": "ListItem",
-				// 	position: 2,
-				// 	name: "Allotment",
-				// 	item: "https://example.com/books/allotment",
-				// },
-			],
+			itemListElement: arr,
 		};
 	},
 };
