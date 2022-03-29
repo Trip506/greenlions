@@ -187,12 +187,13 @@
 <script>
 export default {
 	jsonld() {
+		//Generate breadcrumbs for all dynamic sub routes
 		let root = this.$store.state.webSite;
 		let services = this.$store.state.staticData[0][0];
 		let clients = this.$store.state.staticData[3][0];
 		let areaserved = this.$store.state.staticData[1][0];
 		let portfolio = this.$store.state.staticData[2][0];
-
+		//Array of all
 		let arr = [
 			{
 				"@type": "ListItem",

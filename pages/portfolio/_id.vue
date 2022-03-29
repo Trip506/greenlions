@@ -60,5 +60,25 @@ export default {
 	},
 
 	middleware: "portfolio",
+
+	jsonld() {
+		return {
+			"@context": "http://schema.org",
+			"@type": "Article",
+			name: this.data.name,
+			articleSection: "Portfolio",
+			image: this.$store.state.assetRoot + this.data.header_image.path,
+			url: this.$store.state.webSite + "/" + this.data.slug,
+			logo: this.data.icon,
+			headline: this.data.article_title,
+			text: this.data.article_subtext,
+			author: "Sam",
+			about: "Gardening in Cornwall",
+			wordCount: "",
+			contentLocation: "Cornwall",
+			countryOfOrigin: "United Kingdom",
+			inLanguage: "English",
+		};
+	},
 };
 </script>
