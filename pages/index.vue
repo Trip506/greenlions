@@ -66,8 +66,11 @@
 						<h2 class="pb-3 mbr-bold mbr-fonts-style display-2">
 							{{ data.about_title }}
 						</h2>
-						<h3 class="mbr-section-subtitle pb-3 mbr-fonts-style display-7">
-							{{ data.about_text }}<br /><br />
+						<h3
+							class="mbr-section-subtitle pb-3 mbr-fonts-style display-7"
+							v-html="data.about_text"
+						>
+							<br /><br />
 						</h3>
 					</div>
 				</div>

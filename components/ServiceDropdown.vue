@@ -27,8 +27,9 @@
 									mbr-white mbr-light mbr-fonts-style
 									display-7
 								"
+								v-html="props.text"
 							>
-								{{ props.text }}
+								
 							</h2>
 						</div>
 					</div>
