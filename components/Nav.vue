@@ -193,6 +193,9 @@ export default {
 		let clients = this.$store.state.staticData[3][0];
 		let areaserved = this.$store.state.staticData[1][0];
 		let portfolio = this.$store.state.staticData[2][0];
+		//Array of just products
+		let products = [];
+
 		//Array of all
 		let arr = [
 			{
@@ -227,6 +230,14 @@ export default {
 				name: element.name,
 				item: root + "/" + element.slug,
 			});
+
+			products.push({
+				"@context": "https://schema.org/",
+				"@type": "Product",
+				name: element.name,
+				image: [this.$store.state.assetRoot + element.icon.path],
+				description: element.header_text,
+			});
 		});
 		clients.forEach((element) => {
 			arr.push({
@@ -254,11 +265,14 @@ export default {
 		});
 
 		//Return as JSONLD
-		return {
-			"@context": "https://schema.org",
-			"@type": "BreadcrumbList",
-			itemListElement: arr,
-		};
+		return (
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				itemListElement: arr,
+			},
+			products
+		);
 	},
 };
 </script>
