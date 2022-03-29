@@ -168,7 +168,8 @@ export default {
 
 				url: "http://www.greenlionsgardening.com",
 				sameAs: ["https:/greenlionsgardening.com"],
-				logo: "http://www.greenlionsgardening.com/assets/images/logomark-6.svg",
+
+				image: this.$s$store.state.assetRoot + this.data.header_image.path,
 				areaServed: ["Penzance", "St.Ives", "etc"],
 				description:
 					"We are skilled and trusted gardeners with over 18 years of working horticultural experience in Cornwall . The Green Lions of Penzance are your top choice for garden, allotment and landscaping needs in West Penwith. ",
@@ -213,6 +214,15 @@ export default {
 						},
 					},
 				],
+			},
+
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				url: this.$store.state.webSite,
+				logo:
+					this.$s$store.state.assetRoot +
+					"2022/03/11/logomark-7_uid_620b81a69f86a_uid_622b1a2646834.svg",
 			},
 
 			//Same as breadcrumbs but for mobile
