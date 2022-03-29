@@ -224,19 +224,36 @@ export default {
 			},
 		];
 		services.forEach((element) => {
+			//Breacrumbs
 			arr.push({
 				"@type": "ListItem",
 				position: 2,
 				name: element.name,
 				item: root + "/" + element.slug,
 			});
-
+			//Products
 			products.push({
 				"@context": "https://schema.org/",
 				"@type": "Product",
 				name: element.name,
 				image: [this.$store.state.assetRoot + element.icon.path],
 				description: element.header_text,
+				brand: {
+					"@type": "Brand",
+					name: "Green Lions Gardening",
+				},
+				review: {
+					reviewRating: {
+						"@type": "Rating",
+						ratingValue: "5",
+						bestRating: "5",
+					},
+
+					author: {
+						"@type": "Person",
+						name: "Richard McNallen",
+					},
+				},
 			});
 		});
 		clients.forEach((element) => {

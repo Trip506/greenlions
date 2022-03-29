@@ -165,11 +165,20 @@ export default {
 				"@context": "http://www.schema.org",
 				"@type": "GeneralContractor",
 				name: "The Green Lions Gardening Services",
+
 				url: "http://www.greenlionsgardening.com",
 				sameAs: ["https:/greenlionsgardening.com"],
 				logo: "http://www.greenlionsgardening.com/assets/images/logomark-6.svg",
+				areaServed: ["Penzance", "St.Ives", "etc"],
 				description:
 					"We are skilled and trusted gardeners with over 18 years of working horticultural experience in Cornwall . The Green Lions of Penzance are your top choice for garden, allotment and landscaping needs in West Penwith. ",
+				paymentAccepted: "Cash/Credit Card",
+				priceRange: "£20 - £60 per hour",
+				currenciesAccepted: "GBP",
+				award: "Better Business Bureau Award 2021 ",
+				contactPoint: "Sam Gardener",
+				location: "Penzance, United Kingdom",
+
 				address: {
 					"@type": "PostalAddress",
 					addressLocality: "Penzance",
@@ -180,19 +189,91 @@ export default {
 				openingHours:
 					"Mo 09:00-18:30 Tu 09:00-18:00 Th 09:00-19:00 Fr 09:00-19:00",
 				telephone: "07884 255127",
+				email: "info@greenlionsgardening.com",
 			},
+
 			{
-				"@context": "http://schema.org",
-				"@type": "Product",
-				name: "Regular Garden Services",
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				mainEntity: [
+					{
+						"@type": "Question",
+						name: "What is your availability",
+						acceptedAnswer: {
+							"@type": "Answer",
+							text: "We are open to new clients, but have a busy schedule. Call us to see when we can fit you in, this will depend on the amount of work and where you are. We work from Monday until Friday, except on days with heavy rain.",
+						},
+					},
+					{
+						"@type": "Question",
+						name: "Which areas do you serve?",
+						acceptedAnswer: {
+							"@type": "Answer",
+							text: "We mainly serve the Penzance area, but do offer out-of-town service for larger clients and specialised jobs ",
+						},
+					},
+				],
 			},
-			{
-				"@context": "http://schema.org",
-				"@type": "Product",
-				name: "Tree Care",
-			},
+
+			//Same as breadcrumbs but for mobile
+			// {
+			// 	"@context": "https://schema.org",
+			// 	"@type": "ItemList",
+			// 	itemListElement: [
+			// 		{
+			// 			"@type": "ListItem",
+			// 			position: 1,
+			// 			name: "Services",
+			// 			item: "https://example.com/services",
+			// 		},
+			// 		{
+			// 			"@type": "ListItem",
+			// 			position: 2,
+			// 			name: "Regular Garden Services",
+			// 			item: "https://example.com/books/regular-garden-services",
+			// 		},
+			// 		{
+			// 			"@type": "ListItem",
+			// 			position: 2,
+			// 			name: "Allotment",
+			// 			item: "https://example.com/books/allotment",
+			// 		},
+			// 	],
+			// },
+
+			// {
+			// 	"@context": "http://schema.org",
+			// 	"@type": "Service",
+			// 	name: "Regular Garden Services",
+			// 	provider: "Green Lions Gardening",
+			// 	brand: "Green Lions Gardening",
+			// 	slogan: "Get your gardens tidy and tempting for spring time",
+			// 	description: "Maintaining gardens all year round",
+			// 	serviceType: "Garden Services",
+			// 	image: "",
+			// 	logo: "",
+			// 	offers: "",
+			// 	potentialAction: "Request a quote",
+			// 	serviceType: "https://en.wikipedia.org/wiki/Gardener",
+			// 	additionalType: "https://en.wikipedia.org/wiki/Gardening",
+
+			// 	review: {
+			// 		"@type": "Review",
+			// 		reviewRating: {
+			// 			"@type": "Rating",
+			// 			ratingValue: "5",
+			// 			bestRating: "5",
+			// 		},
+			// 		author: {
+			// 			"@type": "Person",
+			// 			name: "Lillian Ruiz",
+			// 		},
+			// 	},
+
+			// 	serviceOutput: "Beautiful and productive gardens",
+			// 	url: "www.greenlionsgardening.com/regular-garden-services",
+			// },
 		];
 	},
-	//get strapi data
 };
 </script>

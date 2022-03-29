@@ -92,5 +92,14 @@ export default {
 	},
 
 	middleware: "vacancies",
+	jsonld() {
+		return {
+			"@context": "http://schema.org",
+			"@type": "JobPosting",
+			name: "Junior Gardener",
+		};
+	},
 };
 </script>
+
+
