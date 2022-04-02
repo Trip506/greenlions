@@ -55,7 +55,7 @@
 								{{ props.title3 }}
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								{{ props.text2 }}
+								{{ props.text3}}
 							</p>
 						</div>
 					</div>
