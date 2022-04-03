@@ -15,9 +15,10 @@
 								More
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								<u><a href="../vacancies">Recruitment </a></u>
+								<a href="../vacancies">Recruitment </a>
 								<br />
-								<u><a href="../plant-species">Plant Library</a><br /></u>
+								<a href="../plant-species">Plant Library</a><br />
+								<a href="../funny-photos">Funny Photos</a><br />
 							</p>
 						</div>
 					</div>
