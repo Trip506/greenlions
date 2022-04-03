@@ -29,7 +29,9 @@
 										/>
 									</a>
 								</div>
+							
 								<div class="text-wrap">
+										<img class="m-1" style="width:30px" v-if="item.icon" :src="$store.state.assetRoot + item.icon.path" :alt="'Icon for '+ item.name">
 									<h3
 										class="
 											mbr-section-title

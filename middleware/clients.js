@@ -22,7 +22,7 @@ export default async function ({ store, $axios, route }) {
                 "?token=" +
                 store.state.tokens.collections,
                 {
-                    fields: { header_text: 1, header_image: 1, name: 1, slug: 1 }, sort: { _created: -1 },
+                    fields: { header_text: 1, icon: 1, header_image: 1, name: 1, slug: 1 }, sort: { _created: -1 },
                 }
             );
 
@@ -32,7 +32,7 @@ export default async function ({ store, $axios, route }) {
 
 
         catch (e) {
-            // console.log(e.response)
+            error({ statusCode: 404, message: 'Post not found' })
         }
     }
 
@@ -49,7 +49,7 @@ export default async function ({ store, $axios, route }) {
                     store.state.tokens.collections,
 
                     {
-                        fields: { name: 1, header_image: 1, header_text: 1, slug: 1 }, sort: { _created: -1 },
+                        fields: { name: 1, icon: 1, header_image: 1, header_text: 1, slug: 1 }, sort: { _created: -1 },
                     }
                 )
                 .then(res => {
@@ -58,7 +58,7 @@ export default async function ({ store, $axios, route }) {
         }
 
         catch (e) {
-            // console.log(e.response)
+            error({ statusCode: 404, message: 'Post not found' })
         }
 
 }
