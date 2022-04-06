@@ -26,7 +26,35 @@ export default {
 					hid: "description",
 					name: "description",
 					content:
-						"We serve a variety of clients in Penzance and around West Cornwall including: Town Houses, Holiday Properties, Commercial Properties, Manor houses and Large Estates, Wedding Venues and Allotments.",
+						"See our services offered to our loyal clients in and around the Penzance area",
+				},
+
+				{
+					hid: "fb:app_id",
+					name: "fb:app_id",
+					content: this.name,
+				},
+				{
+					hid: "og:title",
+					name: "og:title",
+					content: this.name,
+				},
+				{
+					hid: "og:image",
+					name: "og:image",
+					content:
+						this.$store.state.assetRoot + this.entries[0].header_image.path,
+				},
+				{
+					hid: "twitter:title",
+					name: "twitter:title",
+					content: this.name,
+				},
+				{
+					hid: "og:description",
+					name: "og:description",
+					content:
+						"See our services offered to our loyal clients in and around the Penzance area",
 				},
 			],
 		};
@@ -35,6 +63,7 @@ export default {
 		return {
 			data: this.$store.state.pageData,
 			error: "",
+			name: "Services | Green Lions Gardening",
 		};
 	},
 

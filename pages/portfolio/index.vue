@@ -25,7 +25,34 @@ export default {
 					hid: "description",
 					name: "description",
 					content:
-						"See our recent jobs. We provide our gardening services to wedding venues across Cornwall. We'll transform your chosen matrimonial garden to fit any pristine and ornate wedding venue.",
+						"See our . We provide professional gardening services to our loyal clients in and around Penzance",
+				},
+
+				{
+					hid: "fb:app_id",
+					name: "fb:app_id",
+					content: this.name,
+				},
+				{
+					hid: "og:title",
+					name: "og:title",
+					content: this.name,
+				},
+				{
+					hid: "og:image",
+					name: "og:image",
+					content: this.$store.state.assetRoot + this.data[0].header_image.path,
+				},
+				{
+					hid: "twitter:title",
+					name: "twitter:title",
+					content: this.name,
+				},
+				{
+					hid: "og:description",
+					name: "og:description",
+					content:
+						"See our recent accomplishments on the job. We provide professional gardening services to our loyal clients in and around Penzance",
 				},
 			],
 		};
@@ -34,9 +61,9 @@ export default {
 	data() {
 		return {
 			data: this.$store.state.pageData[0],
-			entries: this.$store.state.pageData[0],
 			posts: [],
 			error: "",
+			name: "Portfolio | Green Lions Gardening",
 		};
 	},
 

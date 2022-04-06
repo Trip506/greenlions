@@ -21,13 +21,40 @@
 export default {
 	head() {
 		return {
-			title: "Services | Green Lions Gardening",
+			title: "Area Served | Green Lions Gardening",
 			meta: [
 				{
 					hid: "description",
 					name: "description",
 					content:
-						"We serve a variety of clients in Penzance and around West Cornwall including: Town Houses, Holiday Properties, Commercial Properties, Manor houses and Large Estates, Wedding Venues and Allotments.",
+						"See the towns accross West Penwith that we provide gardening services for.",
+				},
+
+				{
+					hid: "fb:app_id",
+					name: "fb:app_id",
+					content: this.name,
+				},
+				{
+					hid: "og:title",
+					name: "og:title",
+					content: this.name,
+				},
+				{
+					hid: "og:image",
+					name: "og:image",
+					content: this.$store.state.assetRoot + this.data[0].header_image.path,
+				},
+				{
+					hid: "twitter:title",
+					name: "twitter:title",
+					content: this.name,
+				},
+				{
+					hid: "og:description",
+					name: "og:description",
+					content:
+						"See the towns accross West Penwith that we provide gardening services for.",
 				},
 			],
 		};
@@ -36,6 +63,7 @@ export default {
 		return {
 			data: this.$store.state.pageData,
 			error: "",
+			name: " Area Served | Green Lions Gardening",
 		};
 	},
 

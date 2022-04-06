@@ -20,12 +20,41 @@
 export default {
 	head() {
 		return {
-			title: "Services | Green Lions Gardening",
+			title: "Job Vacancies | Green Lions Gardening",
 			meta: [
 				{
 					hid: "description",
 					name: "description",
-					content: "See our current job vacancies",
+					content:
+						"See our job vacancies on offer. We are a hardworking team of professional gardeners who work in an around the Penzance Area",
+				},
+
+				{
+					hid: "fb:app_id",
+					name: "fb:app_id",
+					content: this.name,
+				},
+				{
+					hid: "og:title",
+					name: "og:title",
+					content: this.name,
+				},
+				{
+					hid: "og:image",
+					name: "og:image",
+					content:
+						this.$store.state.assetRoot + this.entries[0].header_image.path,
+				},
+				{
+					hid: "twitter:title",
+					name: "twitter:title",
+					content: this.name,
+				},
+				{
+					hid: "og:description",
+					name: "og:description",
+					content:
+						"See our job vacancies on offer. We are a hardworking team of professional gardeners who work in an around the Penzance Area",
 				},
 			],
 		};
