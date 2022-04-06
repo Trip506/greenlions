@@ -8,7 +8,7 @@
 			]"
 		></HeaderImage>
 
-		<Items :props="[entries, '/plant-species/', 99]"></Items>
+		<Items :props="[data, '/plant-species/', 99]"></Items>
 
 		<Clients></Clients>
 		<Services></Services>

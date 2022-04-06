@@ -2,13 +2,13 @@
 	<div>
 		<HeaderImage
 			:props="[
-				entries[0].header_image.path,
+				data[0].header_image.path,
 				'Portfolio of Gardening',
 				'See our recent accomplishments on the job',
 			]"
 		></HeaderImage>
 
-		<Items :props="[entries, '/portfolio/', 99]"></Items>
+		<Items :props="[data, '/portfolio/', 99]"></Items>
 
 		<Clients></Clients>
 		<Services></Services>

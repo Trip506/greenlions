@@ -42,8 +42,7 @@ export default {
 				{
 					hid: "og:image",
 					name: "og:image",
-					content:
-						this.$store.state.assetRoot + this.entries[0].header_image.path,
+					content: this.$store.state.assetRoot + this.data[0].header_image.path,
 				},
 				{
 					hid: "twitter:title",
