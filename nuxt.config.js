@@ -17,25 +17,20 @@ export default {
       { hid: 'description', name: 'description', content: "Green Lions Gardening | We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!" },
       { name: 'format-detection', content: 'telephone=no' },
 
-      //Facebook og (open graph) meta data 
+      //Facebook and twitter og (open graph) meta data (used also when sending links on whatsapp/insta)
       { hid: 'fb:app_id', name: 'fb:app_id', content: 'Green Lions Gardening ' },
       { hid: 'og:title', name: 'og:title', content: "Gardening Services in West Penwith " },
       { hid: 'og:image', name: 'og:image', content: "assets/images/iphone0-1349x1012-result.jpg" },
       { hid: 'twitter:title', name: 'twitter:title', content: "Green Lions Gardening" },
       { hid: 'og:description', name: 'og:description', content: "Green Lions Gardening | We provide regular gardening services and grounds maintenance with excellent horticultural and trade knowledge. Serving West Penwith since 2003. We go above and beyond for your property!" }
     ],
+    //Get favicon from assets folder
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // {
-      //   rel: 'stylesheet',
-      //   href: 'https://fonts.googleapis.com/css?family=Reem+Kufi:400,500,600,700&display=swap'
-      // },
-      // {
-      //   rel: 'stylesheet',
-      //   href: 'https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i&display=swap'
-      // }
+
     ],
 
+    //Global JS 
     script: [
       { src: "/web/assets/jquery/jquery.min.js", body: true, type: 'text/javascript', },
       { src: "/popper/popper.min.js", body: true, type: 'text/javascript', },
@@ -46,20 +41,11 @@ export default {
       { src: "/dropdown/js/navbar-dropdown.js", body: true, type: 'text/javascript', },
       { src: "/touchswipe/jquery.touch-swipe.min.js", body: true, type: 'text/javascript', },
 
-      // { src: "/mobirise-shop/script.js", body: true, type: 'text/javascript', },
-      // { src: "/formstyler/jquery.formstyler.js", body: true, type: 'text/javascript', },
-      // { src: "/formstyler/jquery.formstyler.min.js", body: true, type: 'text/javascript', },
-      // { src: "/datepicker/jquery.datetimepicker.full.js", body: true, type: 'text/javascript', },
-
-
-      // { src: "/gallery/script.js", body: true, type: 'text/javascript', },
-      // { src: "/formoid/formoid.min.js", body: true, type: 'text/javascript', },
     ],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  //Global css
   css: [
-
     "assets/web/assets/mobirise-icons2/mobirise2.css",
     "assets/web/assets/mobirise-icons/mobirise-icons.css",
     "assets/tether/tether.min.css",
@@ -68,47 +54,40 @@ export default {
     "assets/bootstrap/css/bootstrap-reboot.min.css",
     "assets/dropdown/css/style.css",
     "assets/formstyler/jquery.formstyler.css",
-
     "assets/socicon/css/styles.css",
     "assets/theme/css/style.css",
     "assets/mobirise/css/mbr-additional.css",
     "assets/fonts/reemi-kufi.css",
     "assets/fonts/muli.css",
-
-
   ],
 
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  // Plugins to run before rendering page
   plugins: [
     '~/plugins/jsonld',
 
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  // Auto import components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  // Modules for dev and build 
   buildModules: [
-    '@nuxtjs/dotenv',
-    '@/modules/sitemapRouteGenerator',
+
   ],
 
+  //Don't build with unused CSS classes 
   build: {
-    // standalone: true,
     extractCSS: true,
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
+  // Modules
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    // With options
-
   ],
 
-  //SEO settings
+  //SEO settings. Generates the XML sitemap 
   sitemap: {
     hostname: "https://greenlionsgardening.com",
     gzip: true,
@@ -119,7 +98,7 @@ export default {
   robots: {
     UserAgent: "*",
     Allow: "/",
-    // Disallow: "/",
+    //Generate dynamic routes automatically based on sitemap of this address
     Sitemap: 'https://greenlionsgardening.com/sitemap.xml'
   },
 
@@ -129,10 +108,6 @@ export default {
   //   port: 8000, // default: 3000
   //   host: '0.0.0.0' // default: localhost
   // },
-
-
-
-
 }
 
 

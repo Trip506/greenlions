@@ -2,11 +2,13 @@ import axios from "axios"
 
 export const state = () => ({
 
-    //Cockpit root
+    //Cockpit asset root
     assetRoot: "https://cms-greenlionsgardening.salumiweb.com/storage/uploads/",
 
-    //Website
+    //CMS root folder
     webRoot: "https://cms-greenlionsgardening.salumiweb.com",
+
+    //Live website (used in code)
     webSite: "https://www.greenlionsgardening.com",
 
     //Api tokens 
@@ -18,23 +20,22 @@ export const state = () => ({
 
     },
 
-
-    //Store response data from middlewares for current page here to be displayed in template
+    //Store currently visited page data from cockpit
     pageData: [],
+
+    //Store navigation data for cockpit collection pages
     staticData: [],
-    navData: [],
-
-
-
 })
 
 //Mutations change store state data 
 export const mutations = {
-    //Fill store with items from middleware axios post to content server 
 
+    //Fill store with items 
     setPageData(state, data) {
         state.pageData = data
     },
+
+    //Save Nav data used in serverinit action 
     setStaticData(state, data) {
         state.staticData = data
     },
@@ -45,10 +46,8 @@ export const mutations = {
 //Actions do stuff 
 export const actions = {
 
-    //Load cms response once and save it 
+    //Load cms response once for collection pages
     async nuxtServerInit({ commit, state }) {
-
-
 
         let collection = "services";
         let collection1 = "locations";
@@ -66,6 +65,7 @@ export const actions = {
 
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
+
         // Locations
         let request1 = await axios.post(
             state.webRoot +
@@ -77,7 +77,7 @@ export const actions = {
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
 
-        //blog
+        //Portfolio
         let request2 = await axios.post(
             state.webRoot +
             "/api/collections/get/" +
@@ -88,7 +88,7 @@ export const actions = {
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
 
-        //clients
+        //Clients
         let request3 = await axios.post(
             state.webRoot +
             "/api/collections/get/" +
@@ -99,7 +99,7 @@ export const actions = {
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
 
-        //contact
+        //Contact
         let request4 = await axios.post(
             state.webRoot +
             "/api/singletons/get/" +
@@ -110,7 +110,7 @@ export const actions = {
             {}
         );
 
-
+        //Call function when reponses have come in, assign these requests to static data array
         await commit("setStaticData", [[request.data.entries], [request1.data.entries], [request2.data.entries], [request3.data.entries], [request4.data]])
 
     },

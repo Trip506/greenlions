@@ -29,7 +29,7 @@
 								Contacts
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								Leo:&nbsp;07884 255127<br />Sam: 07507 539688<br />info@greenlionsgardening.com
+								Leo:&nbsp;07884 255127<br />Sam: 07960 035602<br />info@greenlionsgardening.com
 							</p>
 						</div>
 					</div>

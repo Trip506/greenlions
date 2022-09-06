@@ -2,6 +2,7 @@
     <div>
         <Contact></Contact>
         <ContactForm></ContactForm>
+
     </div>
 </template>
 
