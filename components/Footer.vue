@@ -29,7 +29,7 @@
 								Contacts
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								Leo:&nbsp;07884 255127<br />Sam: 07960 035602<br />info@greenlionsgardening.com
+								Leo:&nbsp;{{$store.state.staticData[4][0].people.phone2}}<br />Sam: {{$store.state.staticData[4][0].people.phone1}}<br />{{$store.state.staticData[4][0].email}}
 							</p>
 						</div>
 					</div>
@@ -41,12 +41,12 @@
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
 								<a
-									href="https://nextdoor.co.uk/pages/green-lions-penzance-gardening-services/"
+									:href="$store.state.staticData[4][0].nextdoor"
 									class="text-primary"
 									target="_blank"
 									>Nextdoor</a
 								><br /><a
-									href="https://www.facebook.com/The-Green-Lions-Gardening-Services-in-West-Penwith-112466311333432"
+										:href="$store.state.staticData[4][0].facebook"
 									class="text-primary"
 									target="_blank"
 									>Facebook</a
@@ -70,7 +70,9 @@
 				<div class="media-container-row align-center mbr-white">
 					<div class="col-12">
 						<p class="mbr-text mb-0 mbr-fonts-style display-7">
-							© The Green Lions Gardening Services&nbsp;
+							© The Green Lions Gardening Services&nbsp; 
+
+							
 						</p>
 					</div>
 				</div>
