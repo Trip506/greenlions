@@ -15,8 +15,8 @@
 								More
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								<a href="../vacancies">Recruitment </a>
-								<br />
+								<a class="text-primary" href="../gardeners/leo-rudman">Leo </a><br />
+
 								<a href="../plant-species">Plant Library</a><br />
 								<a href="../funny-photos">Funny Photos</a><br />
 							</p>
@@ -29,7 +29,7 @@
 								Contacts
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								Leo:&nbsp;{{$store.state.staticData[4][0].people.phone2}}<br />Sam: {{$store.state.staticData[4][0].people.phone1}}<br />{{$store.state.staticData[4][0].email}}
+			Sam: {{$store.state.staticData[4][0].people.phone1}}<br />{{$store.state.staticData[4][0].email}}
 							</p>
 						</div>
 					</div>
@@ -51,6 +51,7 @@
 									target="_blank"
 									>Facebook</a
 								><br />
+								
 							</p>
 						</div>
 					</div>

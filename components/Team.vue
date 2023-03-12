@@ -43,7 +43,7 @@
 						</div>
 					</div>
 
-					<div class="mbr-testimonial align-center col-12 col-md-6 md-pb">
+					<!-- <div class="mbr-testimonial align-center col-12 col-md-6 md-pb">
 						<div class="panel-item">
 							<div class="card-block">
 								<div class="testimonial-photo">
@@ -82,7 +82,7 @@
 									{{ props.text2 }}
 								</p>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

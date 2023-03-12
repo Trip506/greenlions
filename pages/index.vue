@@ -57,7 +57,7 @@
 		<ServiceDropdown :props="data.service"></ServiceDropdown>
 		<Items :props="[blog, '/portfolio/', 3, 'Recent jobs ']"></Items>
 
-		<IconSlogans></IconSlogans>
+		<!-- <IconSlogans></IconSlogans> -->
 
 		<section class="team1 woodm4_team1 cid-sThGNiePHt" id="team01-j">
 			<div class="container">
@@ -83,10 +83,11 @@
 		<!-- <Contact></Contact> -->
 		<!-- <ContactForm></ContactForm> -->
 
-		<Clients></Clients>
-		<Services></Services>
+	
 
 		<BackgroundImage :props="data.bottom_image.path"></BackgroundImage>
+		<Clients></Clients>
+		<Services></Services>
 	</div>
 </template>
 
