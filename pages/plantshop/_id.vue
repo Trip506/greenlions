@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<HeaderImage
-			:props="[data.header_image.path, data.name, data.header_text]"
+			:props="[data.header_image.path, data.common_name]"
 		></HeaderImage>
 
 		<section
@@ -10,13 +10,13 @@
 		>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 md-pb">
+					<div class="col-lg-4 md-pb">
 						<div class="col-lg-12">
 							<Carousel :props="data.article_gallery"></Carousel>
 						</div>
 
 						<!-- Plant details -->
-						<div class="col-lg-12 pt-5">
+						<!-- <div class="col-lg-12 pt-5">
 							<div class="display-5">
 								<ul>
 									<li><b>Family:</b> {{ data.family }}</li>
@@ -28,7 +28,7 @@
 									<li><b>Poisonous:</b> {{ data.poisonous }}</li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 					</div>
 
 					<div class="col-lg-6">
@@ -42,11 +42,47 @@
 						>
 							{{ data.article_title }}
 						</h1>
+						<h2
+							class="
+								mbr-section-title
+								align-left
+								mbr-bold mbr-black mbr-fonts-style
+								display-7
+							"
+						>
+							 {{ data.name }}
+						</h2>
+						<h3
+							class="
+								mbr-section-title
+								align-left
+								mbr-black mbr-fonts-style
+								display-7
+							"
+						>
+							In stock - £7 each
+						</h3>
+
+						
 
 						<p
 							class="text2 mbr-fonts-style display-6"
 							v-html="data.article_main_text"
 						></p>
+						<ul>
+							<li> Ultimate height: {{ data.ultimate_height }}</li>
+							<li> Ultimate spread: {{ data.ultimate_spread}}</li>
+							<li> Time to ultimate height: {{ data.time_to_ultimate_height }}</li>
+						</ul>
+						<br>
+							<a href="/contact">
+								<button 
+										
+										class="btn btn-primary-outline display-7">
+										Buy 
+								</button>
+						</a>
+						
 					</div>
 				</div>
 			</div>
