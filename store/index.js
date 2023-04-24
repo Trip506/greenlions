@@ -74,7 +74,7 @@ export const actions = {
             "?token=" +
             state.tokens.collections,
 
-            { fields: { name: 1, icon: 1, slug: 1 } }
+            { fields: { name: 1, icon: 1, slug: 1 }}
         );
 
         //Portfolio

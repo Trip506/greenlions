@@ -29,7 +29,7 @@
 								Contacts
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-			Sam: {{$store.state.staticData[4][0].people.phone1}}<br />{{$store.state.staticData[4][0].email}}
+			Call Sam at: {{$store.state.staticData[4][0].people.phone1}}<br />or mail me:{{$store.state.staticData[4][0].email}}
 							</p>
 						</div>
 					</div>
