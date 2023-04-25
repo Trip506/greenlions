@@ -55,7 +55,7 @@
 		<IconBar :props="data.icon_bar"></IconBar>
 
 		<ServiceDropdown :props="data.service"></ServiceDropdown>
-		<Items :props="[blog, '/portfolio/', 3, 'Recent jobs ']"></Items>
+		<Items :props="[blog, '/portfolio/', 6, 'Recent jobs ']"></Items>
 
 		<!-- <IconSlogans></IconSlogans> -->
 

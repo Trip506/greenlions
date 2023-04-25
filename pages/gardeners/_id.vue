@@ -61,12 +61,12 @@
 								mbr-bold mbr-black
 								pb-1
 								mbr-fonts-style
-								display-1"><span
+								display-5"><span
 									class="
 										mobi-mbri mobi-mbri-phone
 										mbr-iconfont mbr-iconfont-btn
 									"
-									style="font-size: 50px"
+									style="font-size: 30px"
 								></span
 								> {{ data.phone }}</p>
 					</div>

@@ -25,11 +25,25 @@
 
 					<div class="card p-3 col-12 col-md-6 col-lg-4">
 						<div class="card-box">
-							<h4 class="card-title mbr-bold mbr-fonts-style display-5">
-								Contacts
+							<h4 class="card-title mbr-bold mbr-fonts-style">
+								Contact Sam
 							</h4>
-							<p class="mbr-text mbr-fonts-style display-7">
-			Call Sam at: {{$store.state.staticData[4][0].people.phone1}}<br />or mail me:{{$store.state.staticData[4][0].email}}
+							<p class="mbr-text mbr-fonts-style display-5">
+								<span
+								class="
+									mobi-mbri mobi-mbri-phone
+									mbr-iconfont mbr-iconfont-btn
+								"
+								style="font-size: 20px"
+							></span
+							> {{$store.state.staticData[4][0].people.phone1}}<br />	<span
+							class="
+								mobi-mbri mobi-mbri-letter
+								mbr-iconfont mbr-iconfont-btn
+							"
+							style="font-size: 20px"
+						></span
+						>  <span class="display-7">{{$store.state.staticData[4][0].email}} </span>
 							</p>
 						</div>
 					</div>
