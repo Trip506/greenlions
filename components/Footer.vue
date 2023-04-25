@@ -15,8 +15,6 @@
 								More
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
-								<a class="text-primary" href="../gardeners/leo-rudman">Leo </a><br />
-
 								<a href="../plant-species">Plant Library</a><br />
 								<a href="../funny-photos">Funny Photos</a><br />
 							</p>
@@ -51,7 +49,7 @@
 					<div class="card p-3 col-12 col-md-6 col-lg-4">
 						<div class="card-box">
 							<h4 class="card-title mbr-bold mbr-fonts-style display-5">
-								Social Media
+								Social 
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-7">
 								<a
@@ -65,6 +63,8 @@
 									target="_blank"
 									>Facebook</a
 								><br />
+
+								<a class="text-primary" href="../gardeners/leo-rudman">Leo </a><br />
 								
 							</p>
 						</div>
