@@ -16,6 +16,7 @@
 					">
 					{{props[3]}}
 				</h2>
+				
 				<div class="row">
 					<div v-for="(item, index) in props[0]" v-if="index < props[2]" :key="index" class="card align-center col-12 col-md-6 md-pb col-lg-4" >
 						
@@ -56,7 +57,7 @@
 											"
 										>
 											<a rel="canonical" :href="props[1] + item.slug" class="text-primary"
-												>View More</a
+												>Read More</a
 											>
 										</h4>
 									</div>
@@ -65,10 +66,11 @@
 						</div>
 					</div>
 
-			
+					<a v-if="props[4]" :href="props[1]" rel="canonical"><div class="btn btn-primary-outline display-3"> {{props[4]}}</div></a>
 
 				
 				</div>
+			
 			</div>
 		</section>
     </div>

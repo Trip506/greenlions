@@ -55,7 +55,7 @@
 		<IconBar :props="data.icon_bar"></IconBar>
 
 		<ServiceDropdown :props="data.service"></ServiceDropdown>
-		<Items :props="[blog, '/portfolio/', 6, 'Recent jobs ']"></Items>
+		<Items :props="[blog, '/portfolio/', 3, 'Recent jobs', 'Click here to view even more']"></Items>
 
 		<!-- <IconSlogans></IconSlogans> -->
 
@@ -80,7 +80,7 @@
 			<Team :props="data.team"></Team>
 			
 		</section>
-		<Items :props="[articles, '/articles/',6, 'Some things I wrote...']"></Items>
+		<Items :props="[articles, '/articles/',3, 'Some things I wrote...', 'Click here to read more articles']"></Items>
 
 		<!-- <Contact></Contact> -->
 		<!-- <ContactForm></ContactForm> -->
