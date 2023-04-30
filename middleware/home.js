@@ -31,7 +31,7 @@ export default async function ({ store, $axios, route }) {
             articles +
             "?token=" +
             store.state.tokens.collections,
-            { sort: { _created: -1 }, }
+            { sort: { _created: -1 }, filter:{published:1} }
 
 
         );

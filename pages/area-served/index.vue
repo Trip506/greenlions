@@ -27,7 +27,7 @@ export default {
 					hid: "description",
 					name: "description",
 					content:
-						"See the towns accross West Penwith that we provide gardening services for.",
+						"See the towns accross West Penwith that I provide gardening services for.",
 				},
 
 				{

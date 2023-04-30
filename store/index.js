@@ -53,7 +53,9 @@ export const actions = {
         let collection1 = "locations";
         let collection2 = "blog";
         let collection3 = "clients";
-        let contact = "contact"
+        let collection4 = "articles";
+        let articles = "articles";
+        let contact = "contact";
 
         //Services
         let request = await axios.post(
@@ -65,6 +67,7 @@ export const actions = {
 
             { fields: { name: 1, icon: 1, slug: 1 } }
         );
+        
 
         // Locations
         let request1 = await axios.post(
@@ -110,8 +113,19 @@ export const actions = {
             {}
         );
 
+             //Articles
+             let request5 = await axios.post(
+                state.webRoot +
+                "/api/collections/get/" +
+                collection4 +
+                "?token=" +
+                state.tokens.collections,
+    
+                { fields: { name: 1, icon: 1, slug: 1 } }
+            );
+
         //Call function when reponses have come in, assign these requests to static data array
-        await commit("setStaticData", [[request.data.entries], [request1.data.entries], [request2.data.entries], [request3.data.entries], [request4.data]])
+        await commit("setStaticData", [[request.data.entries], [request1.data.entries], [request2.data.entries], [request3.data.entries], [request4.data], [request5.data.entries]])
 
     },
 }

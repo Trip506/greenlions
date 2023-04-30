@@ -50,11 +50,11 @@
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12" style="">
-									<h5 class="mbr-fonts-style pb-2 display-2">Contact Us</h5>
+									<h5 class="mbr-fonts-style pb-2 display-2">Contact me</h5>
 								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12">
 									<p class="mbr-fonts-style pb-5 display-7">
-										Don't hesitate to reach out to us if you have any
+										Don't hesitate to reach out to me if you have any
 										questions&nbsp;
 									</p>
 								</div>
@@ -156,7 +156,7 @@
 								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12">
 									<h4 class="mbr-fonts-style align-center pt-4 display-4">
-										Remember: It's always quicker to just call us!&nbsp;
+										Remember: It's always quicker to just call me!&nbsp;
 									</h4>
 								</div>
 							</div>

@@ -35,7 +35,7 @@
 			</div>
 		</section>
 		<Items
-			:props="[display, '/area-served/', 99, 'Other towns we serve']"
+			:props="[display, '/area-served/', 99, 'Other towns I serve']"
 		></Items>
 		<Services />
 		<Clients />

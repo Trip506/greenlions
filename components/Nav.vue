@@ -147,7 +147,7 @@
 								>
 							</div>
 						</li>
-						<!-- test bit -->
+
 						<li class="nav-item dropdown">
 							<a
 								class="
@@ -190,7 +190,7 @@
 							>
 							</div>
 						</li>
-							<!-- test bit -->
+
 						
 					
 						<li class="nav-item">
@@ -224,6 +224,7 @@ export default {
 		let clients = this.$store.state.staticData[3][0];
 		let areaserved = this.$store.state.staticData[1][0];
 		let portfolio = this.$store.state.staticData[2][0];
+		let articles = this.$store.state.staticData[5][0];
 		//Array of just products
 		let products = [];
 
@@ -311,6 +312,15 @@ export default {
 				item: root + "/" + element.slug,
 			});
 		});
+		articles.forEach((element) => {
+			arr.push({
+				"@type": "ListItem",
+				position: 2,
+				name: element.name,
+				item: root + "/" + element.slug,
+			});
+		});
+		
 
 		//Return as JSONLD
 		return (
