@@ -147,21 +147,52 @@
 								>
 							</div>
 						</li>
-						<li class="nav-item">
+						<!-- test bit -->
+						<li class="nav-item dropdown">
 							<a
-								class="nav-link link text-warning text-primary display-7"
-								href="../portfolio"
-								aria-expanded="false"
+								class="
+									nav-link
+									link
+									text-warning text-primary
+									dropdown-toggle
+									display-7
+								"
+								href="#"
+								aria-expanded="true"
+								data-toggle="dropdown-submenu"
 								><span
 									class="
-										mobi-mbri mobi-mbri-photos
+									mobi-mbri mobi-mbri-photos
+									
 										mbr-iconfont mbr-iconfont-btn
 									"
 									style="font-size: 20px"
 								></span
 								>Portfolio</a
 							>
+
+							<div class="dropdown-menu">
+								<a
+									:href="'/portfolio/'"
+					
+									:key="index"
+									class="text-warning text-primary dropdown-item display-7"
+									aria-expanded="false"
+									>Recent Jobs</a
+								>
+								<a
+								:href="'/articles/'"
+				
+								:key="index"
+								class="text-warning text-primary dropdown-item display-7"
+								aria-expanded="false"
+								>Articles</a
+							>
+							</div>
 						</li>
+							<!-- test bit -->
+						
+					
 						<li class="nav-item">
 							<a
 								class="nav-link link text-warning text-primary display-7"

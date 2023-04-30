@@ -1,6 +1,7 @@
 export default async function ({ store, $axios, route }) {
     let singleton = "home";
     let blog = "blog";
+    let articles = "articles";
 
 
     try {
@@ -24,12 +25,23 @@ export default async function ({ store, $axios, route }) {
 
 
         );
+        let request3 = await $axios.post(
+            store.state.webRoot +
+            "/api/collections/get/" +
+            articles +
+            "?token=" +
+            store.state.tokens.collections,
+            { sort: { _created: -1 }, }
+
+
+        );
 
 
 
 
 
-        return store.commit("setPageData", [request1.data, request2.data.entries])
+
+        return store.commit("setPageData", [request1.data, request2.data.entries, request3.data.entries])
     }
 
 

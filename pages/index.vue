@@ -78,7 +78,9 @@
 			<!-- Team -->
 
 			<Team :props="data.team"></Team>
+			
 		</section>
+		<Items :props="[articles, '/articles/',6, 'Some things I wrote...']"></Items>
 
 		<!-- <Contact></Contact> -->
 		<!-- <ContactForm></ContactForm> -->
@@ -86,8 +88,8 @@
 	
 
 		<BackgroundImage :props="data.bottom_image.path"></BackgroundImage>
-		<Clients></Clients>
-		<Services></Services>
+		<!-- <Clients></Clients>
+		<Services></Services> -->
 	</div>
 </template>
 
@@ -137,6 +139,7 @@ export default {
 		return {
 			data: this.$store.state.pageData[0],
 			blog: this.$store.state.pageData[1],
+			articles: this.$store.state.pageData[2],
 			posts: [],
 			error: "",
 		};
@@ -157,6 +160,8 @@ export default {
 		ServiceDropdown: () => import("@/components/ServiceDropdown"),
 		GalleryHomepage: () => import("@/components/GalleryHomepage"),
 		Team: () => import("@/components/Team"),
+		Items: () => import("@/components/Items"),
+		
 	},
 
 	// mounted() {
