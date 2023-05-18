@@ -24,7 +24,7 @@
 					<div class="card p-3 col-12 col-md-6 col-lg-4">
 						<div class="card-box">
 							<h4 class="card-title mbr-bold mbr-fonts-style">
-								Contact Sam
+								Email Sam
 							</h4>
 							<p class="mbr-text mbr-fonts-style display-5">
 								<!-- <span
