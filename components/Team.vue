@@ -33,7 +33,7 @@
 										{{ props.title1 }}
 									</h4>
 									<h4 class="phone pb-1 mbr-black mbr-fonts-style display-7">
-										Call<strong> {{ props.number1 }}</strong>
+										<!-- Call<strong> {{ props.number1 }}</strong> -->
 									</h4>
 								</div>
 								<p class="mbr-text mbr-fonts-style display-4">

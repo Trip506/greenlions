@@ -5,18 +5,7 @@
 		<div class="container">
 			<div class="row content">
 				<div class="col-12 col-lg-6 col-md-12 md-pb">
-					<h2
-						class="
-							mbr-section-title
-							align-left
-							mbr-bold
-							pb-4
-							mbr-fonts-style
-							display-2
-						"
-					>
-						Where we are
-					</h2>
+				
 
 					<div class="google-map">
 						<iframe
@@ -44,15 +33,15 @@
 						{{ data.contact_title }}
 					</h3>
 
-					<p class="mbr-text pb-4 align-left mbr-fonts-style display-7">
+					<p class="mbr-text  align-left mbr-fonts-style display-7">
 						{{ data.contact_text }}
 					</p>
 
 					<p class="mbr-text">
-						<strong>Phone:</strong><br />
-						{{ data.people.name1 }}: {{ data.people.phone1 }}<br />
+						<!-- <strong>Phone:</strong><br />
+						{{ data.people.name1 }}: {{ data.people.phone1 }}<br /> -->
 						<!-- {{ data.people.name2 }}: {{ data.people.phone2 }} -->
-						<strong><br /></strong><br /><strong>Email:</strong><br />{{
+						<strong></strong><br /><strong>Email:</strong><br />{{
 							data.email
 						}}<br /><br /><strong>Social Media:</strong><br /><a
 							target="_blank"
