@@ -86,7 +86,7 @@
 				<div class="media-container-row align-center mbr-white">
 					<div class="col-12">
 						<p class="mbr-text mb-0 mbr-fonts-style display-7">
-							© The Green Lions Gardening Services&nbsp; 
+							© Green Lions Gardening Services&nbsp; 
 
 							
 						</p>
