@@ -38,9 +38,9 @@
 					</p>
 
 					<p class="mbr-text">
-						<!-- <strong>Phone:</strong><br />
-						{{ data.people.name1 }}: {{ data.people.phone1 }}<br /> -->
-						<!-- {{ data.people.name2 }}: {{ data.people.phone2 }} -->
+						<strong>Phone:</strong><br />
+						{{ data.people.name1 }}: {{ data.people.phone1 }}<br />  
+						{{ data.people.name2 }}: {{ data.people.phone2 }}
 						<strong></strong><br /><strong>Email:</strong><br />{{
 							data.email
 						}}<br /><br /><strong>Social Media:</strong><br /><a
