@@ -183,7 +183,7 @@ export default {
 				description:
 					"We are skilled and trusted gardeners with over 18 years of working horticultural experience in Cornwall . The Green Lions of Penzance are your top choice for garden, allotment and landscaping needs in West Penwith. ",
 				paymentAccepted: "Cash/Credit Card",
-				priceRange: "£20 - £60 per hour",
+				priceRange: "£20 - £30 per hour",
 				currenciesAccepted: "GBP",
 				award: "Better Business Bureau Award 2021 ",
 				contactPoint: "Sam Gardener",
@@ -198,7 +198,7 @@ export default {
 				},
 				openingHours:
 					"Mo 09:00-18:30 Tu 09:00-18:00 Th 09:00-19:00 Fr 09:00-19:00",
-				telephone: "07884 255127",
+				telephone: "07498 353622",
 				email: "info@greenlionsgardening.com",
 			},
 
