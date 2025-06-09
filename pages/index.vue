@@ -52,7 +52,7 @@
 			</div>
 		</section>
 
-		<IconBar :props="data.icon_bar"></IconBar>
+		<!-- <IconBar :props="data.icon_bar"></IconBar> -->
 
 		<ServiceDropdown :props="data.service"></ServiceDropdown>
 		<Items :props="[blog, '/portfolio/', 3, 'Recent jobs', 'Click here to view even more']"></Items>
